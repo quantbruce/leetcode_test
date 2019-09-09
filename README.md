@@ -1,2 +1,2 @@
 # leetcode_test
-Talent is enduring patience
+Talent is enduring patience!
