@@ -16,3 +16,25 @@ if __name__ == '__main__':
     # strs = ["flower","flow","flight", "flip"]
     strs = []
     print(Solution().longestCommonPrefix(strs))
+    
+    
+    #### Better Way
+    class Solution():
+    def longestCommonPrefix(self, strs):
+        '''
+        :param strs: list[str]
+        :return: str
+        '''
+        result = ''
+        i = 0
+        while True:
+            try:
+                sets = set(string[i] for string in strs)  # set()只返回元素唯一的元素，重复出现的元素也只返回一次
+                if len(sets) == 1:
+                    result += sets.pop()
+                    i += 1
+                else:
+                    break
+            except Exception as e:
+                break
+        return result
