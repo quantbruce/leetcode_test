@@ -38,3 +38,9 @@ if __name__ == '__main__':
             except Exception as e:
                 break
         return result
+    
+    if __name__ == '__main__':
+        strs = ["flower", "flow", "flight", "flip"]
+        a = Solution()
+        print(a.longestCommonPrefix(strs))
+
