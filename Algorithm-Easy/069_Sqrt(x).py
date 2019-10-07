@@ -10,4 +10,4 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-        return right # left-1也行  最后返回的时候left和right要么相遇，要么交叉
+        return right # left-1也行  最后返回的时候left和right已经交叉，也即left>right
