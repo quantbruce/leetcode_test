@@ -1,4 +1,4 @@
-#####有序数组---采用二分法
+#####有序数组查询---有限考虑二分查找法
 
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
