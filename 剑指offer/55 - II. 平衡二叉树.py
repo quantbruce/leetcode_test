@@ -16,3 +16,5 @@ class Solution:
             return max(left, right)+1 if abs(left-right)<=1 else -1
         
         return recur(root)!=-1
+
+    https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-55-ii-ping-heng-er-cha-shu-cong-di-zhi/
