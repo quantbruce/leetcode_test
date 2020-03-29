@@ -1,6 +1,6 @@
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
-        if not root: return 0
+        if not root: return 0  # 这个0 和下面的1组合就是妙用
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
 
 
