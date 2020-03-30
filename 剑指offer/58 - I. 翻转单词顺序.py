@@ -26,6 +26,19 @@ class Solution:
         return(' '.join(res))
         
  https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/solution/po-su-fa-xiao-bai-by-quantbruce/
+    
+    
+    
+#####################最简洁代码 
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        return " ".join(s.split()[::-1])
+
+
+链接：https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/solution/2ci-fan-zhuan-by-xilepeng/
+
+    
+    
         
         
         
