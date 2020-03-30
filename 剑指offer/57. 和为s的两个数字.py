@@ -11,7 +11,7 @@ class Solution:
         # while len(res)<2:
         for j in range(i+1, len(nums)):
             if target-nums[j]!=res[0]:
-                continue
+                pass
             else:
                 res.append(nums[j])
                 break
