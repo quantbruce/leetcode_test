@@ -36,7 +36,7 @@ class Solution:
     
 ######滑动窗口法(最优)
 def findContinuousSequence(self, target: int) -> List[List[int]]:
-    i = 1 # 滑动窗口的左边界
+    i = 1 # 滑动窗口的左边界    # i, j都从1开始才对，否则例如输入15，但最终结果[[0,1,2,3,4,5],[1,2,3,4,5],[4,5,6],[7,8]]， 其中会包含0，是错误的
     j = 1 # 滑动窗口的右边界
     sum = 0 # 滑动窗口中数字的和
     res = []
