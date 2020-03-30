@@ -25,7 +25,7 @@ class Solution:
                 
         return(' '.join(res))
         
-        
+ https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/solution/po-su-fa-xiao-bai-by-quantbruce/
         
         
         
