@@ -7,7 +7,7 @@ class Solution:
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if not root: return 0
-        queue, res = [root], 0
+        queue, res = [root], 0  ### queue=[], queue.append(root) 也可以写成这样。
         while queue:
             tmp = []
             for node in queue:
