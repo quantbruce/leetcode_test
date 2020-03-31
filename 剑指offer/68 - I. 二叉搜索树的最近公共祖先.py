@@ -49,7 +49,7 @@ class Solution(object):
         while root:
             if root.val < q.val and root.val < p.val:  ### 细节，这两个if的顺序不能换，是right在前left在后，二叉树DFS遍历的感觉
                 root = root.right
-            if root.val > q.val and root.val > p.val:
+            (el)if root.val > q.val and root.val > p.val:  ## 这里的if改成elif 两者right/left先后顺序便无所谓了
                 root = root.left
             else:
                 return root
