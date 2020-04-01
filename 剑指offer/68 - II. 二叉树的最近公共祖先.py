@@ -24,7 +24,30 @@ class Solution:
             res = stack_p[i]
             i+=1
         return res # res当下的值总会覆盖之前的值，确保更新。res注意不是list
-
-
+    
+  
 https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
 
+    
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+        if not root or root==p or root==q:
+            return root
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+
+        if not left:
+            return right
+        if not right:
+            return left
+        else:
+            return root
+ 
+https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
