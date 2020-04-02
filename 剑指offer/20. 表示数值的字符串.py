@@ -14,3 +14,12 @@ class Solution(object):
 
 
 https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/solution/onpythonjie-ti-wu-fa-luo-ji-pan-duan-regexdfadeng-/
+    
+    
+class Solution:
+    def isNumber(self, s: str) -> bool:
+        try:
+            float(s)
+            return True
+        except ValueError:
+            return False
