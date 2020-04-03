@@ -1,3 +1,16 @@
+"""
+执行用时 :
+44 ms
+, 在所有 Python3 提交中击败了
+92.78%
+的用户
+内存消耗 :
+15.3 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
         res, path = [], []
@@ -6,7 +19,7 @@ class Solution:
             path.append(root.val)
             tar -= root.val
             if tar == 0 and not root.left and not root.right:
-                res.append(list(path))
+                res.append(list(path))  
             recur(root.left, tar)
             recur(root.right, tar)
             path.pop()
