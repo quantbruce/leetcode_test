@@ -30,6 +30,11 @@ class Solution:
         self.dfs(grid, i, j-1)
         self.dfs(grid, i, j+1)
  
+
+https://blog.csdn.net/starmoth/article/details/88607289
+    
+    
+    
 ##############################BFS
    class Solution:
     directions = [(-1, 0), (0, -1), (1, 0), (0, 1)]
@@ -56,3 +61,6 @@ class Solution:
                                 queue.append((new_i, new_j))
                                 marked[new_i][new_j] = True
         return count
+    
+    
+    https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/
