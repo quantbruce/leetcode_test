@@ -1,5 +1,14 @@
 """
-
+执行用时 :
+84 ms
+, 在所有 Python3 提交中击败了
+56.23%
+的用户
+内存消耗 :
+13.6 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
 """
 
 class Solution:
@@ -16,3 +25,6 @@ class Solution:
                 while s[tail] in s[head:tail]:  # 因为窗口中相等的元素若不在左端点，则需要移动多次，所以需要while循环
                     head += 1
         return res
+
+    
+    
