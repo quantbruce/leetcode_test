@@ -1,3 +1,16 @@
+"""
+执行用时 :
+36 ms
+, 在所有 Python3 提交中击败了
+97.54%
+的用户
+内存消耗 :
+14.6 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         cost, profit = float("+inf"), 0
