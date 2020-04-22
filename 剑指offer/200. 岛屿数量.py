@@ -21,7 +21,7 @@ class Solution:
                     self.dfs(grid,i,j)
         return count
 
-    def dfs(self, grid, i, j):
+    def dfs(self, grid, i, j):    # 因为由上面的循环可知，i的取值是0~len(grid)-1, 所以i=len(grid)时就越界了，j同理。
         if i<0 or i>=len(grid) or j<0 or j>=len(grid[0]) or grid[i][j]=='0':
             return
         grid[i][j] = '0'
