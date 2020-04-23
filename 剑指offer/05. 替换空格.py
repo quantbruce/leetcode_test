@@ -8,3 +8,6 @@ class Solution:
             else:
                 list_.append(rep)
         return ''.join(list_)            #### .join()函数实现list->str
+    
+    
+ https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/solution/mian-shi-ti-05-ti-huan-kong-ge-ji-jian-qing-xi-tu-/
