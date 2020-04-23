@@ -14,8 +14,8 @@ class Solution(object):
         :type inorder: List[int]
         :rtype: TreeNode
         """
-        if len(preorder) == 0:
-            return None
+        if len(preorder) == 0:  #此处为后面递归的出口
+            return None          
         #创建当前节点
         node = TreeNode(preorder[0]) 
         #在中序遍历中查找第一个节点的位置
