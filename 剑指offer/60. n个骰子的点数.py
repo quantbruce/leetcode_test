@@ -14,3 +14,6 @@ def g(n):
         ls.append(round(f(n, i), 5))
     return ls
 
+print(g(4))
+
+
