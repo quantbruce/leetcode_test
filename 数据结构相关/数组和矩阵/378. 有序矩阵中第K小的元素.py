@@ -36,7 +36,28 @@ class Solution:
         res.sort()
         return res[k-1]
         
-        
+#############方法二(更高效的暴力法)
 
+"""
+执行用时 :
+200 ms
+, 在所有 Python3 提交中击败了
+90.84%
+的用户
+内存消耗 :
+19.6 MB
+, 在所有 Python3 提交中击败了
+50.00%
+的用户
+"""
+
+class Solution:
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        lis=[]
+        for l in matrix:
+            lis+=l  ##############体会：列表不要只会append, 还可以用加号。不要思维固化，这样效率会高很多
+        lis.sort()
+      
+        return lis[k-1]
 
 
