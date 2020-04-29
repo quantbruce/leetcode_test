@@ -50,3 +50,7 @@ class Solution:
             else:
                 return True
         return False   
+      
+      
+
+https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solution/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/
