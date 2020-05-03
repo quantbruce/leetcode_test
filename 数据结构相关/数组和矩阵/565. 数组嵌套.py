@@ -56,6 +56,25 @@ class Solution:
 https://leetcode-cn.com/problems/array-nesting/solution/python3zi-dian-by-aiyishiqu-5/
 
 
+ #########方法二(更加简洁，但还没理解！)
+
+def arrayNesting(self, nums):
+    """
+    :type nums: List[int]
+    :rtype: int
+    """
+    maxRes = 0
+    for i in range(len(nums)):
+        curr, j = 0, i
+        while nums[j] >= 0:
+            temp = j
+            j = nums[j]
+            nums[temp] = -1
+            curr += 1
+        maxRes = max(maxRes, curr)
+    return maxRes
+
+https://unclegem.cn/2018/11/25/Leetcode%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-565-%E6%95%B0%E7%BB%84%E5%B5%8C%E5%A5%97/
 
 
 
