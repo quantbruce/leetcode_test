@@ -22,7 +22,7 @@
 的用户
 """
 
-
+##########方法1(双指针迭代)
 class Solution(object):
 	def reverseList(self, head):
 		"""
@@ -46,3 +46,9 @@ class Solution(object):
 
 
 https://leetcode-cn.com/problems/reverse-linked-list/solution/dong-hua-yan-shi-206-fan-zhuan-lian-biao-by-user74/
+
+#############方法2(递归法)
+	
+	
+	
+	
