@@ -52,6 +52,10 @@ class Solution:
             count = max(count,ans)
         return count
 
+    
+Tips: 不用每次都重置字典d，应为已经访问过的元素，是不会出现在其他的答案里的，比如说S[0] = {A[0], A[5], A[6], A[2]} = {5, 6, 2, 0}，
+      那么无论从0,5,6,2的哪一个开始找，结果多事一样的只是顺序不同，而且之后的答案里是不会出现 0,5,6,2这几个数的，
+      应为一个数只能出现在一个答案里。不可能有好几个索引都指向这一个元素
 
 https://leetcode-cn.com/problems/array-nesting/solution/python3zi-dian-by-aiyishiqu-5/
 
