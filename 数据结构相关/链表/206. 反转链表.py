@@ -40,7 +40,7 @@ class Solution(object):
 			# 然后将当前节点指向pre
 			cur.next = pre
 			# pre和cur节点都前进一位
-			pre = cur
+			pre = cur                ##########这行代码的左右移动还没搞清楚？容易弄混！！！
 			cur = tmp
 		return pre	
 
