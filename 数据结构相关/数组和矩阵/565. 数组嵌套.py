@@ -58,6 +58,21 @@ https://leetcode-cn.com/problems/array-nesting/solution/python3zi-dian-by-aiyish
 
  #########方法二(更加简洁，但还没理解！)
 
+
+"""
+执行用时 :
+148 ms
+, 在所有 Python3 提交中击败了
+57.67%
+的用户
+内存消耗 :
+15.6 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
+
 def arrayNesting(self, nums):
     """
     :type nums: List[int]
