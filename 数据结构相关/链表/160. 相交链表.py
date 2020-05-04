@@ -32,9 +32,9 @@ class Solution:
             nodeB = nodeB.next if nodeB else headA
         return nodeA
 
-        ###31-32行代码简写等于以下展开
+        ###31-32行代码简写等于以下展开(也即等号左边的受体都是一样的，区别在等号右边)
         if nodeA:
-            nodeA = nodeA.next
+            nodeA = nodeA.next 
         else:
             nodeA = headB
 
