@@ -36,12 +36,12 @@ class Solution(object):
 		# 这里只做演示，就不搞那么骚气的写法了
 		while cur:
 			# 记录当前节点的下一个节点
-			tmp = cur.next
+			tmp = cur.next 
 			# 然后将当前节点指向pre
 			cur.next = pre
 			# pre和cur节点都前进一位
-			pre = cur                ##########这行代码的左右移动还没搞清楚？容易弄混！！！
-			cur = tmp
+			pre = cur                # 现在的pre要等与之前的cur
+			cur = tmp	         # 现在的cur要等于之前的tmp
 		return pre	
 
 
