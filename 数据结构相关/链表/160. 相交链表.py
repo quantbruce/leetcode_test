@@ -32,6 +32,11 @@ class Solution:
             nodeB = nodeB.next if nodeB else headA
         return nodeA
 
+        ###31-32行代码简写等于以下展开
+        if nodeA:
+            nodeA = nodeA.next
+        else:
+            nodeA = headB
 
 https://leetcode-cn.com/problems/intersection-of-two-linked-lists/solution/jiao-ni-yong-lang-man-de-fang-shi-zhao-dao-liang-2/
 
