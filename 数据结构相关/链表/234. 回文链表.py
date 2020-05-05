@@ -43,7 +43,18 @@ https://leetcode-cn.com/problems/palindrome-linked-list/solution/hui-wen-lian-bi
 
 
 ##########方法二(递归) 讲解的非常好，要理解透彻递归的底层原理
-
+"""
+执行用时 :
+104 ms
+, 在所有 Python3 提交中击败了
+30.09%
+的用户
+内存消耗 :
+75.9 MB
+, 在所有 Python3 提交中击败了
+5.00%
+的用户
+"""
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -66,6 +77,9 @@ class Solution:
         return recursively_check()
 
 https://leetcode-cn.com/problems/palindrome-linked-list/solution/hui-wen-lian-biao-by-leetcode/
+    
+    
+    
 
 ##########方法三(避免使用 O(n)额外空间的方法就是改变输入。) 最优方法
 
