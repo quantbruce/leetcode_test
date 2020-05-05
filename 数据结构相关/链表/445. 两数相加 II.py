@@ -36,15 +36,15 @@ class Solution:
             
         ans = None
         carry = 0
-        while s1 or s2 or carry != 0:
-            a = 0 if not s1 else s1.pop()
+        while s1 or s2 or carry != 0:     # carry!=0的情况就是当s1和s2都同时为空时，如果最高位加起来大于10有进位carry, 
+            a = 0 if not s1 else s1.pop()  # 则这个进位还要进行一个头插法, 这样答案才会对
             b = 0 if not s2 else s2.pop()
             cur = a + b + carry
             carry = cur // 10
             cur %= 10
             
             curnode = ListNode(cur) # 头擦法还有些理解生疏，要多在草稿纸上画图理解，培养感觉。
-            curnode.next = ans
+            curnode.next = ans  # 这一轮的节点下一个，就是上一轮最后返回的答案节点
             ans = curnode
         return ans
 
