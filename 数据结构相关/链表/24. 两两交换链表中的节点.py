@@ -82,7 +82,7 @@ class Solution:
         """
         # Dummy node acts as the prevNode for the head node
         # of the list and hence stores pointer to the head node.
-        dummy = ListNode(-1)
+        dummy = ListNode(-1) ## 也可以改成ListNode(0) 
         dummy.next = head
 
         prev_node = dummy
