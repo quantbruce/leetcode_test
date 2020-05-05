@@ -45,9 +45,29 @@ https://leetcode-cn.com/problems/palindrome-linked-list/solution/hui-wen-lian-bi
 ##########方法二(递归) 讲解的非常好，要理解透彻递归的底层原理
 
 
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
 
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        self.front_pointer=head
 
-##########方法三(避免使用 O(n)额外空间的方法就是改变输入。)
+        def recursively_check(current_node=head):
+            if current_node is not None:
+                if not recursively_check(current_node.next): # 防止不是回文数时，不再更深入的遍历元素。即使止损。
+                    return False
+                if self.front_pointer.val != current_node.val:
+                    return False
+                self.front_pointer = self.front_pointer.next
+            return True
+        return recursively_check()
+
+https://leetcode-cn.com/problems/palindrome-linked-list/solution/hui-wen-lian-biao-by-leetcode/
+
+##########方法三(避免使用 O(n)额外空间的方法就是改变输入。) 最优方法
 
 
 
