@@ -61,14 +61,14 @@ class Solution:
     def splitListToParts(self, root: ListNode, k: int) -> List[ListNode]:
         # 构建链表
         cur = root
-        for N in range(1001):
+        for N in range(1001):  ##########为什么这里需要这样赋值？不理解N的企图
             if not cur: break
             cur = cur.next
         width, remainder = divmod(N, k) # divmod(被除数, 除数) 返回 (商, 余数)
 
         # 开始带条件赋值
         ans = []
-        cur = root
+        cur = root  # 因为之前的cur位置发生变化，已经不是指向首位置了，所以需要重新赋值
         for i in range(k):
             head = write = ListNode(None) # 头部空指针套路, head和write是指向同一个引用的
             for j in range(width + (i < remainder)): # 精髓
