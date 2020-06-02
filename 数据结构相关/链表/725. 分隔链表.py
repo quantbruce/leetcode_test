@@ -61,7 +61,7 @@ class Solution:
     def splitListToParts(self, root: ListNode, k: int) -> List[ListNode]:
         # 构建链表
         cur = root
-        for N in range(1001):  ##########为什么这里需要这样赋值？不理解N的企图
+        for N in range(1001):  #root的长度输入时任给，但是上限给定最多1000，所以例如root=[1,2,3]，循环三次就会退出了。并不会执行完所有循环
             if not cur: break
             cur = cur.next
         width, remainder = divmod(N, k) # divmod(被除数, 除数) 返回 (商, 余数)
