@@ -62,7 +62,7 @@ class MyStack:
         Returns whether the stack is empty.
         """
         return len(self.q)==0
-        # return not bool(self.q)
+        # return not bool(self.q)  #这种写法和上面也是等价的，只是还没太理解这个套路
 
 
 # Your MyStack object will be instantiated and called as such:
