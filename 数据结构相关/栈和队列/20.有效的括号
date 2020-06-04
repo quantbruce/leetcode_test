@@ -39,6 +39,6 @@ class Solution:
         return len(stack) == 1 # 最后栈的长度为1，也就是前面的都配对完了，只剩下'#'，就表明所有括号配对成功
                                # tips: 栈stack的长度在每一次pop()后都会对应变短
         
-        
+https://leetcode-cn.com/problems/valid-parentheses/solution/valid-parentheses-fu-zhu-zhan-fa-by-jin407891080/
         
         
