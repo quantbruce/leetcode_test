@@ -108,7 +108,21 @@ class Solution:
 插入
 
 
-#### 方法4
+#### 方法4  插入法
+
+"""
+执行用时 :
+164 ms
+, 在所有 Python3 提交中击败了
+5.79%
+的用户
+内存消耗 :
+13.8 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         n = len(nums)
