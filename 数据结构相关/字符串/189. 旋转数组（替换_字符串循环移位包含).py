@@ -34,5 +34,23 @@
 的用户
 """
 
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        k = k % n
+        def swap(left, right):
+            while left<right:
+                nums[left],nums[right] = nums[right], nums[left]
+                left += 1
+                right -= 1    
+        swap(0, n-k-1)
+        swap(n-k, n-1)
+        swap(0, n-1)
+
+        
+https://leetcode-cn.com/problems/rotate-array/solution/san-ci-fan-zhuan-fu-yi-xie-pythonicde-jie-fa-pytho/
 
 
