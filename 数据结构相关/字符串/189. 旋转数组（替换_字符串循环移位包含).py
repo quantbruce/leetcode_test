@@ -54,3 +54,38 @@ class Solution:
 https://leetcode-cn.com/problems/rotate-array/solution/san-ci-fan-zhuan-fu-yi-xie-pythonicde-jie-fa-pytho/
 
 
+###方法2  另外一种写法，借助python的切片完成反转。
+
+
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n = len(nums)
+        k %= n
+        nums[:] = nums[::-1]
+        nums[:k] = nums[:k][::-1]
+        nums[k:] = nums[k:][::-1]
+        
+一些pythonic的解法
+切片
+
+
+#### 方法3 
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        n=len(nums)
+        k%=n
+        nums[:]=nums[n-k:]+nums[:n-k]
+插入
+
+
+#### 方法4
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        n = len(nums)
+        k %= n
+        for _ in range(k):
+            nums.insert(0, nums.pop())
+
