@@ -56,6 +56,18 @@ https://leetcode-cn.com/problems/rotate-array/solution/san-ci-fan-zhuan-fu-yi-xi
 
 ###方法2  另外一种写法，借助python的切片完成反转。
 
+"""
+执行用时 :
+32 ms
+, 在所有 Python3 提交中击败了
+97.90%
+的用户
+内存消耗 :
+14 MB
+, 在所有 Python3 提交中击败了
+86.49%
+的用户
+"""
 
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
