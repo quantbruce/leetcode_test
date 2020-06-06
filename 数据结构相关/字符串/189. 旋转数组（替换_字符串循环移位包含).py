@@ -85,6 +85,21 @@ class Solution:
 
 
 #### 方法3 
+
+"""
+执行用时 :
+40 ms
+, 在所有 Python3 提交中击败了
+81.23%
+的用户
+内存消耗 :
+13.9 MB
+, 在所有 Python3 提交中击败了
+91.89%
+的用户
+"""
+
+
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         n=len(nums)
