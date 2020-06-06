@@ -40,7 +40,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
-        k = k % n
+        k = k % n  # 这是为了防止k大于n时的情况
         def swap(left, right):
             while left<right:
                 nums[left],nums[right] = nums[right], nums[left]
@@ -114,5 +114,5 @@ class Solution:
         n = len(nums)
         k %= n
         for _ in range(k):
-            nums.insert(0, nums.pop())
+            nums.insert(0, nums.pop()) # 在index=0的地方插入，相当于头插法，并不会覆盖之前index元素，只会让他不断右移
 
