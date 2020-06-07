@@ -55,6 +55,19 @@ class Solution:
 #############方法2 动态规划法
 ###### 我翻译了人家的java代码(再好好吃透下)
 
+"""
+执行用时 :
+280 ms
+, 在所有 Python3 提交中击败了
+46.46%
+的用户
+内存消耗 :
+22.2 MB
+, 在所有 Python3 提交中击败了
+7.69%
+的用户
+"""
+
 class Solution:
     def countSubstrings(self, s: str) -> int:
         dp = [[False for _ in range(len(s))] for _ in range(len(s))]
