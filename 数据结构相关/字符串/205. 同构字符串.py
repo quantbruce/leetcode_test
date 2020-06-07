@@ -37,7 +37,7 @@
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        dic = {}
+        dic = {}                    # 总体思路是 s[i]作为key, t[i]作为value
         for i in range(len(s)):
             if s[i] not in dic:  # 如果s[i]不在key中，但是t[i]却在values中，此时肯定不对
                 if t[i] in dic.values():
