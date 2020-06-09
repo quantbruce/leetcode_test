@@ -20,7 +20,7 @@
 上面的箭头指出了对应二进制位不同的位置。
 
 
-#############方法1, 掉包法
+#############方法1, 调包法
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
         return bin(x^y)[2:].count('1')
@@ -76,4 +76,5 @@ class Solution:
          xor = xor & (xor - 1) # 位运算tricks: n&(n-1) 去除 n 的位级表示中最低的那一位 1
       return distance
 
-        
+
+https://leetcode-cn.com/problems/hamming-distance/solution/yi-ming-ju-chi-by-leetcode/
