@@ -34,14 +34,79 @@ class Solution:
         
         
         
- ###################方法2
+###################方法2 排序法
+
+"""
+执行用时 :
+60 ms
+, 在所有 Python3 提交中击败了
+43.37%
+的用户
+内存消耗 :
+14.5 MB
+, 在所有 Python3 提交中击败了
+12.12%
+的用户
+"""
+
+ class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums.sort()
+        if nums[-1] != len(nums):
+            return len(nums)
+        elif nums[0] != 0:
+            return 0 
+
+        for i in range(1, len(nums)):
+            expected_num = nums[i-1]+1
+            if nums[i]!=expected_num:
+                return expected_num
  
+ ###################方法3 哈希表
+ """
+ 执行用时 :
+56 ms
+, 在所有 Python3 提交中击败了
+53.68%
+的用户
+内存消耗 :
+15.1 MB
+, 在所有 Python3 提交中击败了
+6.06%
+的用户
+ """
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        nums_set = set(nums)
+        for num in range(len(nums)+1):
+            if num not in nums_set:
+                return num
  
- ###################方法3
+ ###################方法4 位运算 (最优方法)
  
+"""
+执行用时 :
+48 ms
+, 在所有 Python3 提交中击败了
+80.37%
+的用户
+内存消耗 :
+14.7 MB
+, 在所有 Python3 提交中击败了
+6.06%
+的用户
+"""
  
- ###################方法4
- 
+ class Solution:
+    def missingNumber(self, nums):
+        missing = len(nums)
+        for i, num in enumerate(nums):
+            missing ^= i ^ num
+        return missing
+
+    
+ https://leetcode-cn.com/problems/missing-number/solution/que-shi-shu-zi-by-leetcode/
+
         
         
         
