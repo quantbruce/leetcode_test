@@ -55,11 +55,40 @@ class Solution:
         return [i for i in hashmap if hashmap[i]==1]
         
         
-      
+#######################方法2：两个掩码      
+###tips: 比较难想到，需要记住套路。如果是3个单独出现的数字，该如何做？自己多想想看。
+
+"""
+执行用时 :
+48 ms
+, 在所有 Python3 提交中击败了
+62.70%
+的用户
+内存消耗 :
+14.9 MB
+, 在所有 Python3 提交中击败了
+33.33%
+的用户
+"""        
+class Solution:
+    def singleNumber(self, nums: int) -> List[int]:
+        # difference between two numbers (x and y) which were seen only once
+        bitmask = 0
+        for num in nums:
+            bitmask ^= num
         
+        # rightmost 1-bit diff between x and y
+        diff = bitmask & (-bitmask)
         
+        x = 0
+        for num in nums:
+            # bitmask which will contain only x
+            if num & diff:
+                x ^= num
         
-        
-        
-        
+        return [x, bitmask^x]
+
+
+https://leetcode-cn.com/problems/single-number-iii/solution/zhi-chu-xian-yi-ci-de-shu-zi-iii-by-leetcode/
+       
         
