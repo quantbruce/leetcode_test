@@ -1,4 +1,4 @@
-371. 两整数之和
+371. 两整数之和  ## 替代程序员代码面试指南 ：P317
 不使用运算符 + 和 -，计算两整数a 、b之和。
 
 示例 1:
@@ -20,6 +20,20 @@ class Solution:
 
 
 ##########方法2  异或+移位组合法（有些难）
+
+"""
+执行用时 :
+32 ms
+, 在所有 Python3 提交中击败了
+93.50%
+的用户
+内存消耗 :
+13.8 MB
+, 在所有 Python3 提交中击败了
+16.67%
+的用户
+"""
+
 class Solution(object):
     def getSum(self, a, b):
         """
@@ -40,5 +54,6 @@ class Solution(object):
             b = carry % MASK
         return a if a <= MAX_INT else ~((a % MIN_INT) ^ MAX_INT)   ### 这行代码还没吃透
 
+    
 https://leetcode-cn.com/problems/sum-of-two-integers/solution/wei-yun-suan-xiang-jie-yi-ji-zai-python-zhong-xu-y/
 
