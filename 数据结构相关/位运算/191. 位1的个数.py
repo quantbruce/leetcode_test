@@ -59,7 +59,12 @@ class Solution:
         
         
   
-  
+时间复杂度：O(1)O(1) 。运行时间与 nn 中位为 11 的有关。在最坏情况下， nn 中所有位都是 11 。对于 32 位整数，运行时间是 O(1)O(1) 的。
+
+空间复杂度：O(1)O(1) 。没有使用额外空间。
+
+https://leetcode-cn.com/problems/number-of-1-bits/solution/wei-1de-ge-shu-by-leetcode/
+
   
   
 
