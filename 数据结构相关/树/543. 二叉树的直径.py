@@ -34,7 +34,7 @@
 
 class Solution(object):
     def diameterOfBinaryTree(self, root):
-        self.ans = 1
+        self.ans = 1  # 两个节点之间的距离，最小也必然是1，所以这里是1而不是0
         def depth(node):
             # 访问到空节点了，返回0
             if not node: return 0
