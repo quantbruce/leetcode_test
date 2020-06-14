@@ -99,3 +99,6 @@ class Solution:
             else:
                 stack.append([t[0].right, t[1].right])
         return t1
+
+
+https://leetcode-cn.com/problems/merge-two-binary-trees/solution/he-bing-er-cha-shu-by-leetcode/
