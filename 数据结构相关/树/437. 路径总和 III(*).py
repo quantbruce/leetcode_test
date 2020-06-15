@@ -69,6 +69,18 @@ https://leetcode-cn.com/problems/path-sum-iii/solution/hot-100-437lu-jing-zong-h
 #########################方法二，前缀和法。最优
 #####tips: 细节还没完全吃透
 
+"""
+执行用时 :
+52 ms
+, 在所有 Python3 提交中击败了
+98.90%
+的用户
+内存消耗 :
+14.4 MB
+, 在所有 Python3 提交中击败了
+25.00%
+的用户
+"""
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> int:
         prefixSumTree = {0:1}
