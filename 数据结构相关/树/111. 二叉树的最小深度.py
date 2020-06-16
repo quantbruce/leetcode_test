@@ -56,7 +56,7 @@ class Solution:
         if not root:
             return 0
         ## 让它去钻
-        left = self.minDepth(root.left)
+        left = self.minDepth(root.left)   #left和right分别等于多少呢，不外乎三个return中吐出的值，学会这种思路来分析代码
         right = self.minDepth(root.right)
         ## 如果只有该节点只有一个儿子节点
         if not left or not right:
