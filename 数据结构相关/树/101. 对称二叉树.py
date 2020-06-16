@@ -45,3 +45,46 @@ class Solution:
 
 
 https://leetcode-cn.com/problems/symmetric-tree/solution/hua-jie-suan-fa-101-dui-cheng-er-cha-shu-by-guanpe/
+
+    
+    
+    
+###############方法2 迭代法(BFS思路)
+
+"""
+执行用时 :
+44 ms
+, 在所有 Python3 提交中击败了
+71.44%
+的用户
+内存消耗 :
+13.8 MB
+, 在所有 Python3 提交中击败了
+6.06%
+的用户
+"""
+
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        if not root: return True
+        q = []
+        q.append(root.left)
+        q.append(root.right)
+        while q:
+            node1 = q.pop(0)
+            node2 = q.pop(0)
+            if not node1 and not node2:
+                continue
+            if not node1 or not node2 or node1.val != node2.val:
+                return False
+            q.append(node1.left)
+            q.append(node2.right)
+            q.append(node1.right)
+            q.append(node2.left)
+        return True
+    
+    
+https://leetcode-cn.com/problems/symmetric-tree/solution/di-gui-die-dai-bi-xu-miao-dong-by-sweetiee/
+    
+    
+    
