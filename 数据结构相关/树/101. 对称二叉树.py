@@ -24,7 +24,7 @@
 ########################################  你可以运用递归和迭代两种方法解决这个问题吗？
 
 
-############方法1： 复制同一颗树对比对比的递归思路
+############方法1： 复制同一颗树对比对比的递归思路 (最优法)
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -47,9 +47,38 @@ class Solution:
 https://leetcode-cn.com/problems/symmetric-tree/solution/hua-jie-suan-fa-101-dui-cheng-er-cha-shu-by-guanpe/
 
     
+###############方法2 单树_递归法(DFS思路)
+
+"""
+执行用时 :
+44 ms
+, 在所有 Python3 提交中击败了
+71.44%
+的用户
+内存消耗 :
+13.8 MB
+, 在所有 Python3 提交中击败了
+6.06%
+的用户
+"""
+
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        if not root: return True
+        return self.cmp(root.left, root.right)
+
+    def cmp(self, node1, node2):
+        if not node1 and not node2:
+            return True
+        if not node1 or not node2 or node1.val != node2.val:
+            return False
+        
+        return self.cmp(node1.left, node2.right) and \
+        self.cmp(node1.right, node2.left)
     
+https://leetcode-cn.com/problems/symmetric-tree/solution/di-gui-die-dai-bi-xu-miao-dong-by-sweetiee/    
     
-###############方法2 迭代法(BFS思路)
+###############方法3 迭代法(BFS思路)
 
 """
 执行用时 :
