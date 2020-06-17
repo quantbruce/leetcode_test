@@ -70,8 +70,8 @@ class Solution:
             if root.right and root.val == root.right.val:
                 right_arrow = right_length + 1
             self.ans = max(self.ans, left_arrow + right_arrow) # 保持ans每次递归后得到更新
-            return max(left_arrow, right_arrow) # 该轮返回的结果
-
+            return max(left_arrow, right_arrow) # 该轮返回的结果,也就是该节点单边最长值，为什么要返回该节点单边最长值，
+                                                # 是为了给它的父节点求最长单边值用。
         arrow_length(root)
         return self.ans
         
