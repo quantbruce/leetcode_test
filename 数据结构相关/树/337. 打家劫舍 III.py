@@ -70,4 +70,31 @@ class Solution:
         
 https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/ 
         
-        
+###################方法三，继续优化(最优法)
+#####体会：这个思路比较有新意，代码也简介，但是要理解需要难点。
+
+class Solution:
+    def rob(self, root: TreeNode) -> int:
+        def helper(root):
+            if not root: return [0, 0]
+            res = [0, 0]
+            left = helper(root.left)
+            right = helper(root.right)
+
+            res[0] = max(left[0], left[1]) + max(right[0], right[1])
+            res[1] = left[0] + right[0] + root.val
+            return res
+        ans = helper(root)
+        return max(ans[0], ans[1]) 
+
+
+https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/ 
+
+
+
+
+
+
+
+
+
