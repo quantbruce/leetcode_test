@@ -31,7 +31,27 @@
 
 #####################方法1：暴力法，
 
+"""
+体会下思想就好，实际代码python3是超时的
+"""
 
+class Solution:
+    def rob(self, root: TreeNode) -> int:
+        memo = {}
+    
+        def robInternal(root, memo):
+            if not root: return 0
+            if memo.get(root): return memo[root]
+            money = root.val
+            if root.left:
+                money+=(robInternal(root.left.left,memo)+robInternal(root.left.right,memo))
+            if root.right:
+                money+=(robInternal(root.right.left,memo)+robInternal(root.right.right,memo))
+            res = max(money, robInternal(root.left,memo)+robInternal(root.right,memo))
+            memo[root] = res
+            return res
+
+        return robInternal(root, memo) 
 
 
 ######################方法2：记忆化 - 解决重复子问题
@@ -75,6 +95,19 @@ https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie
 ###################方法三，继续优化(最优法)
 #####体会：这个思路比较有新意，代码也简介，但是要理解需要难点。
 
+"""
+执行用时 :
+56 ms
+, 在所有 Python3 提交中击败了
+91.16%
+的用户
+内存消耗 :
+15.6 MB
+, 在所有 Python3 提交中击败了
+50.00%
+的用户
+"""
+
 class Solution:
     def rob(self, root: TreeNode) -> int:
         def helper(root):
@@ -92,6 +125,8 @@ class Solution:
 
 https://leetcode-cn.com/problems/house-robber-iii/solution/san-chong-fang-fa-jie-jue-shu-xing-dong-tai-gui-hu/ 
 
+
+##################方法4 动态规划
 
 
 
