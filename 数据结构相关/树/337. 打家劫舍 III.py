@@ -63,7 +63,7 @@ class Solution:
                 money += (robInternal(root.right.left, memo) + robInternal(root.right.right, memo))
             res = max(money, robInternal(root.left, memo) + robInternal(root.right, memo))
             memo[root] = res
-            return res
+            return res  # 一定要记得写个出口返回值，不然递归会一直执行下去
            
         return robInternal(root, memo) 
         
