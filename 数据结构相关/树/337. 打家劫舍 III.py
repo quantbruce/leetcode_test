@@ -29,6 +29,8 @@
 解释: 小偷一晚能够盗取的最高金额 = 4 + 5 = 9.
 
 
+#####################方法1：暴力法，
+
 
 
 
@@ -81,8 +83,8 @@ class Solution:
             left = helper(root.left)
             right = helper(root.right)
 
-            res[0] = max(left[0], left[1]) + max(right[0], right[1])
-            res[1] = left[0] + right[0] + root.val
+            res[0] = max(left[0], left[1]) + max(right[0], right[1])  # 当前节点选择不偷时，两个孩子节点只需要拿最多的钱出来就行
+            res[1] = left[0] + right[0] + root.val                    # (两个孩子节点偷不偷没关系)，这里之前没想通，好好体会下！
             return res
         ans = helper(root)
         return max(ans[0], ans[1]) 
