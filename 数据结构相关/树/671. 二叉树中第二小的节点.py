@@ -62,7 +62,8 @@ class Solution:
         
         
 ######################方法2  迭代法？
-        
+##### 与方法1在性能上差不多
+
 """
 执行用时 :
 36 ms
@@ -92,9 +93,9 @@ class Solution:
             return root.val
         left = self.helper(root.left, min_val)
         right = self.helper(root.right, min_val)
-        if left == -1:
+        if left == -1:  ## left可以返回root.val，也可以返回-1
             return right
-        if right == -1:
+        if right == -1: ## right可以返回root.val, 也可以返回-1
             return left
         return min(left, right)
         
