@@ -97,7 +97,7 @@ class Solution:
             return right
         if right == -1: ## right可以返回root.val, 也可以返回-1
             return left
-        return min(left, right)
+        return min(left, right)  ## 来到这一步，必然是left,和right都不为-1, 都有各自返回的root.val
         
         
 #### 解答在下方评论区
