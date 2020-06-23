@@ -94,7 +94,39 @@ class Solution:
 
         
    
+###################方法2：DFS
 
+"""
+执行用时：
+56 ms
+, 在所有 Python3 提交中击败了
+92.79%
+的用户
+内存消耗：
+16.3 MB
+, 在所有 Python3 提交中击败了
+16.67%
+的用户
+"""
+
+class Solution:
+    def averageOfLevels(self, root: TreeNode) -> List[float]:
+        total, count = [], []
+        self.helper(root, 0, total, count)
+        for i in range(len(total)):
+            total[i] = total[i]/count[i]
+        return total
+
+    def helper(self, root, i, total, count):
+        if not root: return 0
+        if i>= len(total):   # 将i看成total与count的下标，这样好理解这个条件语句，其中要体会到total与count一定是等长的。
+            total.append(root.val)
+            count.append(1)
+        else:
+            total[i] += root.val
+            count[i] += 1
+        self.helper(root.left, i+1, total, count)  # i+1就是往下面钻一层
+        self.helper(root.right, i+1, total, count) 
 
 
 
