@@ -78,6 +78,18 @@ https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/yan-se-b
 ###########底下的解答区高赞回答，还可以将方法2进一步让代码更简化
 #####思路和方法2本质上是一样的
 
+"""
+执行用时：
+36 ms
+, 在所有 Python3 提交中击败了
+86.66%
+的用户
+内存消耗：
+13.7 MB
+, 在所有 Python3 提交中击败了
+7.84%
+的用户
+"""
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
