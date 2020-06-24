@@ -75,6 +75,20 @@ class Solution:
 https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/yan-se-biao-ji-fa-yi-chong-tong-yong-qie-jian-ming/
 
 
+###########底下的解答区高赞回答，还可以将方法2进一步让代码更简化
+#####思路和方法2本质上是一样的
 
 
+class Solution:
+    def inorderTraversal(self, root: TreeNode) -> List[int]:
+        stack, res = [root], []
+        while stack:
+            node = stack.pop()
+            if isinstance(node, TreeNode):
+                stack.extend([node.right, node.val, node.left]) # node.right和node.left是TreeNode类型(表明还未访问过)，而node.val是int类型(代表已经访问过)
+            elif isinstance(node, int):
+                res.append(node)
+        return res
+
+https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/yan-se-biao-ji-fa-yi-chong-tong-yong-qie-jian-ming/204119
                
