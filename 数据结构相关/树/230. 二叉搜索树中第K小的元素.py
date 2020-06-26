@@ -61,8 +61,8 @@ class Solution:
 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yuan-su-by-le/
         
       
-#########################方法2 BFS法
-######这个及时止损BFS区别于一般套路，要好好掌握
+#########################方法2 BFS法  (中序遍历）
+######这个及时止损BFS区别于一般套路，要好好掌握，
  
 """
 执行用时：
