@@ -60,3 +60,43 @@ class Solution:
         
 https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yuan-su-by-le/
         
+      
+#########################方法2 BFS法
+######这个及时止损BFS区别于一般套路，要好好掌握
+ 
+"""
+执行用时：
+64 ms
+, 在所有 Python3 提交中击败了
+73.15%
+的用户
+内存消耗：
+17.8 MB
+, 在所有 Python3 提交中击败了
+7.14%
+的用户
+"""
+
+class Solution:
+    def kthSmallest(self, root: TreeNode, k: int) -> int:
+        stack = []
+        while True:
+            while root:
+                stack.append(root)
+                root = root.left
+            root = stack.pop()
+            k -= 1
+            if not k:
+                return root.val
+            root = root.right
+   
+   
+# 复杂度分析
+# 时间复杂度：\mathcal{O}(H + k)O(H+k)，其中 HH 指的是树的高度，由于我们开始遍历之前，要先向下达到叶，当树是一个平衡树时：复杂度为 \mathcal{O}(\log N + k)O(logN+k)。当树是一个不平衡树时：复杂度为 \mathcal{O}(N + k)O(N+k)，此时所有的节点都在左子树。
+# 空间复杂度：\mathcal{O}(H + k)O(H+k)。当树是一个平衡树时：\mathcal{O}(\log N + k)O(logN+k)。当树是一个非平衡树时：\mathcal{O}(N + k)O(N+k)
+
+https://leetcode-cn.com/problems/kth-smallest-element-in-a-bst/solution/er-cha-sou-suo-shu-zhong-di-kxiao-de-yuan-su-by-le/
+
+   
+      
+      
