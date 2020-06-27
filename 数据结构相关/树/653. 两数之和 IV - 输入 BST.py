@@ -90,7 +90,7 @@ class Solution:
         if not root: return False
         if k-root.val in allset:
             return True
-        allset.add(root.val)
+        allset.add(root.val)  # allset()里的元素是越来越多的，最好以后在稿纸上比划比划下，多体会下。
         return self.find(root.left, k, allset) or self.find(root.right, k, allset)
 
 
