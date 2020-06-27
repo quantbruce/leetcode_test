@@ -99,3 +99,13 @@ class Solution:
 
       
 https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/solution/you-xu-lian-biao-zhuan-huan-er-cha-sou-suo-shu-by-/
+
+      
+      
+#####################方法3 中序遍历模拟
+#######日后有时间再细究
+       
+      
+      
+      
+      
