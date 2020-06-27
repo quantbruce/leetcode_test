@@ -47,7 +47,16 @@ class Solution:
         return helper(0, len(nums)-1)
 
 
+ """
+时间复杂度：O(N)，每个元素只访问一次。
+空间复杂度：O(N)，二叉搜索树空间 O(N)，递归栈深度 O(logN)
+ """
+
 https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/jiang-you-xu-shu-zu-zhuan-huan-wei-er-cha-sou-s-15/
-      
+
 # 关于搜索二叉树的空间复杂度解释：
 https://blog.csdn.net/xuxinrk/article/details/89553511
+      
+      
+      
+      
