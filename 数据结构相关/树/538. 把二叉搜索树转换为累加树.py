@@ -30,7 +30,7 @@
 
 class Solution:
     def __init__(self):
-        self.total = 0
+        self.total = 0  # 注意一定要这样定义个初始化方法，设置成全局变量才有效
 
     def convertBST(self, root: TreeNode) -> TreeNode:
         if root:
