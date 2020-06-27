@@ -45,7 +45,35 @@ https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/ba-er-cha-
 
 
 
+###########################方法2  迭代法
 
+"""
+执行用时：
+76 ms
+, 在所有 Python3 提交中击败了
+87.07%
+的用户
+内存消耗：
+15.6 MB
+, 在所有 Python3 提交中击败了
+16.67%
+的用户
+"""
 
+class Solution:
+    def convertBST(self, root: TreeNode) -> TreeNode:
+        total = 0
+        node = root
+        stack = []
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.right
+            node = stack.pop()
+            total += node.val
+            node.val = total
+            node = node.left
+        return root
 
+https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/ba-er-cha-sou-suo-shu-zhuan-huan-wei-lei-jia-shu-3/
         
