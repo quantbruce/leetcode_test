@@ -66,8 +66,33 @@ class Solution:
 https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst/solution/pythonliang-shu-zhi-he-by-jutraman/
 
 
-########################方法2 
+########################方法2 集合法
+
+"""
+执行用时：
+100 ms
+, 在所有 Python3 提交中击败了
+60.74%
+的用户
+内存消耗：
+15.9 MB
+, 在所有 Python3 提交中击败了
+50.00%
+的用户
+"""
+
+class Solution:
+    def findTarget(self, root: TreeNode, k: int) -> bool:
+        allset = set()
+        return self.find(root, k, allset)
+
+    def find(self, root, k, allset):
+        if not root: return False
+        if k-root.val in allset:
+            return True
+        allset.add(root.val)
+        return self.find(root.left, k, allset) or self.find(root.right, k, allset)
 
 
-
+https://leetcode-cn.com/problems/two-sum-iv-input-is-a-bst/solution/liang-shu-zhi-he-iv-by-leetcode/
 
