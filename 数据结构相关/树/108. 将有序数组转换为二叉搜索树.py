@@ -49,10 +49,5 @@ class Solution:
 
 https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/jiang-you-xu-shu-zu-zhuan-huan-wei-er-cha-sou-s-15/
       
-      
-      
-      
-      
-      
-      
-      
+# 关于搜索二叉树的空间复杂度解释：
+https://blog.csdn.net/xuxinrk/article/details/89553511
