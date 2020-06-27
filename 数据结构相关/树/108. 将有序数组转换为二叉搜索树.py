@@ -38,6 +38,8 @@ class Solution:
             if left>right:
                 return None
             p = (left + right) // 2  # 均分后取左端点
+            # if (left+right)&1: p+=1                 #####方法2  就是这个小细节不同，其他都和方法1一样
+            # if (left+right)&1: p+=randint(0, 1)     #####方法3  就是这个小细节不同，其他都和方法1一样
             root = TreeNode(nums[p])
             root.left = helper(left, p-1)
             root.right = helper(p+1, right)
@@ -46,3 +48,11 @@ class Solution:
 
 
 https://leetcode-cn.com/problems/convert-sorted-array-to-binary-search-tree/solution/jiang-you-xu-shu-zu-zhuan-huan-wei-er-cha-sou-s-15/
+      
+      
+      
+      
+      
+      
+      
+      
