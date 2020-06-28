@@ -67,7 +67,20 @@ https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/solution/cai-ni
    
 ####################方法2  BST模板法
 ###### 以后再细究
-   
+
+"""
+执行用时：
+64 ms
+, 在所有 Python3 提交中击败了
+88.49%
+的用户
+内存消耗：
+17.4 MB       ###空间复杂度为什么还是高了些？
+, 在所有 Python3 提交中击败了
+20.00%
+的用户
+"""
+
 class Solution:
     def findMode(self, root: TreeNode) -> List[int]:
         if not root: return []
