@@ -65,12 +65,38 @@ https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/solution/cai-ni
 
    
    
-####################方法2  满足进阶的其他方法
+####################方法2  BST模板法
 ###### 以后再细究
    
+class Solution:
+    def findMode(self, root: TreeNode) -> List[int]:
+        if not root: return []
+        p = root
+        st, res = [], []
+        max_times, time = 1, 1
+        pre = float("inf")
+        while p or st:
+            while p:
+                st.append(p)
+                p = p.left
+            p = st.pop()
+            cur = p.val
+            if cur == pre:
+                time += 1
+            else:
+                time = 1
+                pre = cur
+            if time == max_times:
+                res.append(cur)  # 因为可能有多个元素出现次数相同
+            if time > max_times:
+                res = [cur] # 此时只考虑当前元素，因为它目前是出现次数最多的，所以不用res.append()
+                max_times = time
+            p = p.right
+        return res
    
    
+时间复杂度：O(N)，N为树中节点个数。
+空间复杂度：最坏情况下为O(N)， 例如树畸形（树的高度为线性）或每个元素出现一次的情形。
 
-
-        
+https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/solution/zhong-xu-bian-li-tuan-mie-xi-lie-er-cha-sou-suo-sh/        
         
