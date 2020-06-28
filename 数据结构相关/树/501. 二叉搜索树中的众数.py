@@ -100,7 +100,7 @@ class Solution:
                 time = 1
                 pre = cur
             if time == max_times:
-                res.append(cur)  # 因为可能有多个元素出现次数相同
+                res.append(cur)  # 因为可能有多个元素出现次数相同，所以需要append(), 而不是覆盖
             if time > max_times:
                 res = [cur] # 此时只考虑当前元素，因为它目前是出现次数最多的，所以不用res.append()
                 max_times = time
@@ -113,3 +113,12 @@ class Solution:
 
 https://leetcode-cn.com/problems/minimum-absolute-difference-in-bst/solution/zhong-xu-bian-li-tuan-mie-xi-lie-er-cha-sou-suo-sh/        
         
+      
+      
+################方法3 
+########暂时还未理解其代码，以后再细究下
+
+https://leetcode-cn.com/problems/find-mode-in-binary-search-tree/solution/er-cha-sou-suo-shu-zhong-de-zhong-shu-python3zhong/
+      
+      
+      
