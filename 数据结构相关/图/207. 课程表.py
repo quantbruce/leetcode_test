@@ -68,5 +68,53 @@ class Solution:
         
 https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
   
-        
+
+###################方法2 递归法
+
+"""
+执行用时：
+44 ms
+, 在所有 Python3 提交中击败了
+92.91%
+的用户
+内存消耗：
+16.2 MB
+, 在所有 Python3 提交中击败了
+11.11%
+的用户
+"""
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        def dfs(i, adjacency, flag):
+            if flag[i]==1: return False
+            if flag[i]==-1: return True
+            flag[i]=1
+            for j in adjacency[i]:
+                if not dfs(j, adjacency, flag): return False
+            flag[i]=-1
+            return True
+
+        adjacency = [[] for _ in range(numCourses)]
+        flag = [0 for _ in range(numCourses)]   
+        for cur, pre in prerequisites:
+            adjacency[pre].append(cur)
+        for i in range(numCourses):
+            if not dfs(i, adjacency, flag): return False
+        return True
+
+       
+https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
+
+
+
+
+
+
+
+
+
+
+
+
         
