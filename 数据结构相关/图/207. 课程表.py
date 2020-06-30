@@ -58,7 +58,7 @@ class Solution:
 
         while queue:
             pre = queue.popleft()
-            numCourses -= 1 
+            numCourses -= 1
             for cur in adjacency[pre]:
                 indegrees[cur] -= 1
                 if not indegrees[cur]:
@@ -92,7 +92,7 @@ class Solution:
             flag[i]=1
             for j in adjacency[i]:
                 if not dfs(j, adjacency, flag): return False
-            flag[i]=-1
+            flag[i]=-1  # 这行代码需要反复理解下
             return True
 
         adjacency = [[] for _ in range(numCourses)]
