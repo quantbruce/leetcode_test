@@ -72,3 +72,49 @@ https://leetcode-cn.com/problems/sum-of-square-numbers/solution/ping-fang-shu-zh
 ###主要利用了 费马平方和定理，日后再细啃
 
 
+
+
+
+
+############方法4 双指针法 (最优)
+####该法来源于CS-Notes, 
+
+"""
+执行用时：
+124 ms
+, 在所有 Python3 提交中击败了
+97.40%
+的用户
+内存消耗：
+13.8 MB
+, 在所有 Python3 提交中击败了
+20.00%
+的用户
+"""
+
+
+import math
+class Solution:
+    def judgeSquareSum(self, c: int) -> bool:
+        i, j = 0, int(math.sqrt(c))
+        while i<=j: # 这里要取等号，否则c=2不会通过
+            powSum = i*i + j*j
+            if powSum<c:
+                i+=1
+            elif powSum>c:
+                j-=1
+            else:
+                return True
+        return False
+
+
+
+
+
+
+
+
+
+
+
+
