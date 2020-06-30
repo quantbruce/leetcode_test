@@ -43,6 +43,7 @@ class Solution:
             else:             
                 return [left+1, right+1]
                 
-自己写的，思路和官方解答一样           
                 
-                
+# 自己写的，思路和官方解答一样           
+# 底下这个是讲双指针解法的原理的，以后有时间可以细究      
+https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/solution/yi-zhang-tu-gao-su-ni-on-de-shuang-zhi-zhen-jie-fa/    
