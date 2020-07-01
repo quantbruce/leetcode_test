@@ -73,17 +73,23 @@ https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/sol
 
 class Solution:
     def findLongestWord(self, s: str, d: List[str]) -> str:
-        d.sort(key=lambda x: (-len(x), x))
-        def f(c):
+        d.sort(key=lambda x: (-len(x), x))#对字典d进行排序，第一关键字是长度降序，第二关键字是字符串本身字典序
+        def f(c):                   #匹配函数
             i = 0
-            for j in c:
-                if (i := s.find(j, i)) == -1:
-                    return True
-                i += 1
-        return next((c for c in d if not f(c)), '')       
-        
-        
-https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/solution/524-tong-guo-shan-chu-zi-mu-pi-pei-dao-zi-dian-li-/  
+            for j in c:             #遍历单词里的字母
+                k = s.find(j, i)    #查找函数，后一个参数是查找起点
+                if k == -1:
+                    return False    #查找失败就返回错误
+                i = k + 1           #查找成功就更新查找起点
+            return True
+        for c in d:                 #遍历字符串列表
+            if f(c):                #如果符合验证就输出
+                return c
+        return ''                   #否则输出空串
+
+
+https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/solution/524-tong-guo-shan-chu-zi-mu-pi-pei-dao-zi-dian-li-/
+
         
         
         
