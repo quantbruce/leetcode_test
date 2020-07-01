@@ -46,7 +46,7 @@ class Solution:
         g.sort()
         s.sort()
         gi, si = 0, 0
-        while gi < len(g) and si < len(s):
+        while gi < len(g) and si < len(s): # 饼干和孩子都要保证同时存在，这样才能实现饼干分给孩子
             if g[gi] <= s[si]:
                 gi += 1    
             si += 1 # 不管孩子是否被满足，一轮过后都要迭代饼干
