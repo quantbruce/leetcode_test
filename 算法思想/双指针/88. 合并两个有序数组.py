@@ -43,8 +43,44 @@ https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-yo
 
 ###############方法2 双指针 / 从前往后
 
+"""
+执行用时：
+44 ms
+, 在所有 Python3 提交中击败了
+48.21%
+的用户
+内存消耗：
+13.6 MB
+, 在所有 Python3 提交中击败了
+6.90%
+的用户
+"""
 
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        nums1_copy = nums1[:m]
+        nums1[:] = []
+        p1, p2 = 0, 0  
+        while p1 < m and p2 < n:
+            if nums1_copy[p1] < nums2[p2]:
+                nums1.append(nums1_copy[p1])
+                p1 += 1
+            else:
+                nums1.append(nums2[p2])
+                p2 += 1
+        if p1 < m:
+            nums1[p1+p2:] = nums1_copy[p1:]
+        if p2 < n:
+            nums1[p1+p2:] = nums2[p2:]
+        # return nums1
 
-
+https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetcode/
+ 
+ 
+ 
+ 
 
 
