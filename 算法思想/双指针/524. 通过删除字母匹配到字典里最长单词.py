@@ -90,7 +90,13 @@ class Solution:
 
 https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/solution/524-tong-guo-shan-chu-zi-mu-pi-pei-dao-zi-dian-li-/
 
-        
+"""
+时间复杂度： O(n \cdot x \log n + n \cdot x)O(n⋅xlogn+n⋅x) 。这里， nn 表示列表 dd 中字符串的数目，xx 表示字符串的平均长度。排序需要花费 O(n\log n)O(nlogn) 的时间， isSubsequence 函数需要花费 O(x)O(x) 的时间去检查一个字符串是否是另一个字符串的子序列。
+
+空间复杂度： O(\log n)O(logn) 。排序平均需要 O(\log n)O(logn) 的空间。
+
+https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/solution/tong-guo-shan-chu-zi-mu-pi-pei-dao-zi-dian-li-zui-/
+"""        
         
         
         
