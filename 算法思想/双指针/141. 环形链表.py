@@ -72,11 +72,11 @@ https://leetcode-cn.com/problems/linked-list-cycle/solution/huan-xing-lian-biao-
 
 class Solution:
     def hasCycle(self, head: ListNode) -> bool:
-        if not head or not head.next: return False
+        if not head or not head.next: return False # 这里的 or not head.next 可以去掉不考虑
         slow = head
         fast = head.next
         while slow != fast:
-            if not fast or not fast.next:
+            if not fast or not fast.next: # 这里的or not fast.next 不能去掉，因为下面fast = fast.next.next 是建立在fast.next的基础上才有，否则衍生不出来前者，没意义
                 return False
             slow = slow.next
             fast = fast.next.next
