@@ -17,6 +17,8 @@ nums2 = [2,5,6],       n = 3
 
 
 ##################方法1  直观朴素法
+#######方法1是通用，方法2和方法3是对有序数组才有用
+
 
 """
 执行用时：
@@ -81,6 +83,42 @@ https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-yo
  
  
  
+ ###########方法3 逆序3指针 最优
  
+"""
+执行用时：
+40 ms
+, 在所有 Python3 提交中击败了
+71.96%
+的用户
+内存消耗：
+13.7 MB
+, 在所有 Python3 提交中击败了
+6.90%
+的用户
+ """
+ 
+ class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        p1, p2 = m-1, n-1
+        p = m + n - 1
 
+        while p1 >= 0 and p2 >= 0:
+            if nums1[p1] > nums2[p2]:
+                nums1[p] = nums1[p1]
+                p1 -= 1
+            else:
+                nums1[p] = nums2[p2]
+                p2 -= 1
+            p -= 1
+        
+        nums1[:p2+1] = nums2[:p2+1] #######这行代码非常容易遗漏，是为了防止nums1中最小的元素都比num2大的情形
 
+# 时间复杂度： O(m+n)
+# 空间复杂度： O(1)        
+        
+https://leetcode-cn.com/problems/merge-sorted-array/solution/he-bing-liang-ge-you-xu-shu-zu-by-leetcode/
+        
