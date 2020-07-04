@@ -46,3 +46,18 @@ class Solution:
         
 https://leetcode-cn.com/problems/can-place-flowers/solution/lian-xu-san-ge-0ze-ke-yi-chong-yi-pen-hua-by-ya-le/
         
+
+#################方法2 官方题解法
+
+class Solution:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        i = 0, count = 0
+        while i<len(flowerbed):
+            if flowerbed[i]==0 and (i==0 or flowerbed[i-1]=0) and\  # 不知道为什么这行代码java转译python就报错
+                (i==len(flowerbed)-1 or flowerbed[i+1]=0):
+                flowerbed[i]=1
+                count+=1
+            i+=1
+        return count>=n
+        
+https://leetcode-cn.com/problems/can-place-flowers/solution/chong-hua-wen-ti-by-leetcode/
