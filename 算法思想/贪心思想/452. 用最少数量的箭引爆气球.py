@@ -47,4 +47,12 @@ https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/solu
 
 我觉得掌握到这个程度就可以应付普通的面试了，和对待「时间复杂度」的准确验证一下，我们只需要有个感性的认识即可，具体想了解的话可能得看一些专业著作。就会有点晕了。
 """
-        
+
+"""
+方法：贪心算法
+贪心算法一般用来解决需要 “找到要做某事的最小数量” 或 “找到在某些情况下适合的最大物品数量” 的问题，且提供的是无序的输入。
+
+贪心算法的思想是每一步都选择最佳解决方案，最终获得全局最佳的解决方案。
+作者：LeetCode
+链接：https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-b-2/
+"""  
