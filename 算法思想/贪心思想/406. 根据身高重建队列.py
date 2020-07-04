@@ -40,4 +40,5 @@ class Solution:
 #时间复杂度：O(N^2) ??? 细究下？
 #空间复杂度：O(N)
 
+
 https://leetcode-cn.com/problems/queue-reconstruction-by-height/solution/gen-ju-shen-gao-zhong-jian-dui-lie-by-leetcode/
