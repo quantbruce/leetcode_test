@@ -42,5 +42,9 @@ class Solution:
 https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/solution/yong-zui-shao-shu-liang-de-jian-yin-bao-qi-qiu-b-2/
         
         
-        
+"""
+贪心算法真的很多时候要靠猜，先猜可不可以用贪心算法，然后尝试举出反例，如果举不出反例，再去编码验证贪心算法是否有效。
+
+我觉得掌握到这个程度就可以应付普通的面试了，和对待「时间复杂度」的准确验证一下，我们只需要有个感性的认识即可，具体想了解的话可能得看一些专业著作。就会有点晕了。
+"""
         
