@@ -74,7 +74,56 @@ class Solution:
 # 时间复杂度: O(N)
 # 空间复杂度: O(1)
                 
-##########################方法2 
+ 
+ ### 进一步优化以上代码后
+ 
+"""
+执行用时：
+140 ms
+, 在所有 Python3 提交中击败了
+50.24%
+的用户
+内存消耗：
+14.1 MB
+, 在所有 Python3 提交中击败了
+25.00%
+的用户
+ """
+ class Solution:
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        for i in letters:
+            if ord(i) > ord(target): # 实际上，字符串本身就可以比较，无需再写ord
+                return i
+        return letters[0]
+       
+       
+       
+### 再进一步优化后
+
+"""
+执行用时：
+128 ms
+, 在所有 Python3 提交中击败了
+94.83%
+的用户
+内存消耗：
+14.1 MB
+, 在所有 Python3 提交中击败了
+25.00%
+的用户
+"""
+
+class Solution:
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        for i in letters:
+            if i > target:
+                return i
+        return letters[0]
+       
+https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/solution/xun-zhao-bi-mu-biao-zi-mu-da-de-zui-xiao-zi-mu-by-/
+ 
+ 
+###############################方法2 
 
 
 
