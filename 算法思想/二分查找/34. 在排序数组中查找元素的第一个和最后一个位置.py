@@ -49,7 +49,7 @@ https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sort
 
 
 #############方法2 两次复用 二分查找
-######自己看了很久博客，时间花太多了，不过还是自己最后写的，效率太低不满意！
+######自己看了很久博客，时间花太多了8h...，不过还是自己最后写的，效率太低不满意！
 
 """
 执行用时：
