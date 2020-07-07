@@ -44,7 +44,7 @@ class Solution:
                 left = mid + 1
             else:
                 right = mid - 1
-            if nums[mid] > nums[mid+1]: # 区间长度为偶数 如[6, 7, 2, 3]
+            if nums[mid] > nums[mid+1]: # 区间长度为偶数 如[6, 7, 2, 3]  #这两种结束的条件不容易一下想到，记住了。
                 return nums[mid+1]   
             if nums[mid-1] > nums[mid]: # 区间长度为奇数 如[7, 2, 3]
                 return nums[mid]  
