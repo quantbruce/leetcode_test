@@ -88,7 +88,7 @@ https://leetcode-cn.com/problems/single-element-in-a-sorted-array/solution/you-x
 
 ## 代码更优雅，时间复杂度O(logN/2) 日后细究
 
-
+https://leetcode-cn.com/problems/single-element-in-a-sorted-array/solution/you-xu-shu-zu-zhong-de-dan-yi-yuan-su-by-leetcode/
 
 
 
