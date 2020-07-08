@@ -64,8 +64,36 @@ class Solution:
 #思路来源 64 题
  
 
-################方法2 
+################方法2 数学 组合数法
+### 时间复杂度和空间复杂还没搞清楚
 
+"""
+执行用时：
+44 ms
+, 在所有 Python3 提交中击败了
+51.27%
+的用户
+内存消耗：
+13.7 MB
+, 在所有 Python3 提交中击败了
+6.25%
+的用户
+"""
 
-
-
+import math
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        return int(math.factorial(m+n-2)/math.factorial(m-1)/math.factorial(n-1))
+   
+#时间复杂度：
+#空间复杂度：
+   
+https://leetcode-cn.com/problems/unique-paths/solution/dong-tai-gui-hua-by-powcai-2/
+   
+   
+########方法3 动态规划法 另类写法 + 不断优化空间复杂度
+   
+   
+https://leetcode-cn.com/problems/unique-paths/solution/dong-tai-gui-hua-by-powcai-2/
+   
+   
