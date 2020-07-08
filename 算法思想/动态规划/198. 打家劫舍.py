@@ -24,7 +24,8 @@
 0 <= nums[i] <= 400
 
 
-###########方法1  动态规划法 
+###########方法1  动态规划法
+######体会：感觉能用动态规划的地方往往能用滚动数组法，两者本质递推方程原理一致，但后者的空间复杂度更低，可以降到O(1)
 
 """
 执行用时：
@@ -57,6 +58,29 @@ https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcod
 
 ###########方法2  滚动数组法
         
+"""
+执行用时：
+36 ms
+, 在所有 Python3 提交中击败了
+87.57%
+的用户
+内存消耗：
+13.6 MB
+, 在所有 Python3 提交中击败了
+9.09%
+的用户
+"""
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if not nums: return 0
+        if len(nums) == 1: return nums[0]
+
+        first, second = nums[0], max(nums[0], nums[1])
+        for i in range(2, len(nums)):
+            first, second = second, max(first+nums[i], second)
+        return second
+
 https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcode-solution/
 
 # 时间复杂度: O(N)
