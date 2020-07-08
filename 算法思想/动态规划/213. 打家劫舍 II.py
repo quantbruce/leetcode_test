@@ -42,4 +42,10 @@ class Solution:
 # 空间复杂度: O(1)
 https://leetcode-cn.com/problems/house-robber-ii/solution/213-da-jia-jie-she-iidong-tai-gui-hua-jie-gou-hua-/
 
-        
+"""
+补充：
+该解法问题转化不太严谨的，因为对于一个环来说，如果求最大值，存在首尾两个节点都不取的情况；
+但为什么问题可以转化为求两个队列呢？
+因为对于上述情况，即首尾都不取时，它的最大值肯定小于等于只去掉首或者只去掉尾的队列。
+即f（n1,n2,n3）<=f(n1,n2,n3,n4)
+"""     
