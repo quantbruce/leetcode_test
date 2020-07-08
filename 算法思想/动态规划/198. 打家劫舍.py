@@ -59,8 +59,8 @@ https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcod
         
 https://leetcode-cn.com/problems/house-robber/solution/da-jia-jie-she-by-leetcode-solution/
 
-
-
+# 时间复杂度: O(N)
+# 空间复杂度：O(1) 可以降到O(1)
 
 
 
