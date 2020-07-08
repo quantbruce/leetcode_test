@@ -34,7 +34,7 @@ class Solution:
         def helper(nums: List[int]):
             first, second = 0, 0 # 这个地方不能写成first, second = nums[0], max(nums[0], nums[1]) 因为nums此时只是一个形参，又没有预定义为数组，
             for i in range(len(nums)): # 故写成0，0草稿纸上笔画下，这样赋初值去迭代算最后结果也是一样的
-                first, second = second, max(first + nums[i], second)
+                first, second = second, max(first + nums[i], second)  # i 换成 num 这里不写成索引形式更好，与for num in nums: 搭配
             return second
         return max(helper(nums[1:]), helper(nums[:-1])) if len(nums)!=1 else nums[0]
         
