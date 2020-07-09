@@ -108,5 +108,18 @@ https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi
 
 ########### 方法5 动态规划法 优化
 
+#时间复杂度：O(N）
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/
 
+    
+    
+########### 方法6 滚动数组法 最优
+
+#时间复杂度：O(N)
+#空间复杂度: O(1)
+https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/
+    
+    
+    
+    
