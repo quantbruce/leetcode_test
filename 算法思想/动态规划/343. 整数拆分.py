@@ -108,6 +108,29 @@ https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi
 
 ########### 方法5 动态规划法 优化
 
+"""
+执行用时：
+44 ms
+, 在所有 Python3 提交中击败了
+64.49%
+的用户
+内存消耗：
+13.7 MB
+, 在所有 Python3 提交中击败了
+25.00%
+的用户
+"""
+
+class Solution:
+    def integerBreak(self, n: int) -> int:
+        dp = [1 for _ in range(n+1)]
+        dp[0] = 0 # dp[0]也等于1的话，则n=3时，就返回3，而正确答案是2
+        for i in range(3, n+1):
+            dp[i] = max(max(i-1, dp[i-1])*1,
+                        max(i-2, dp[i-2])*2,
+                        max(i-3, dp[i-3])*3)
+        return dp[n]
+
 #时间复杂度：O(N）
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/integer-break/solution/tan-xin-xuan-ze-xing-zhi-de-jian-dan-zheng-ming-py/
