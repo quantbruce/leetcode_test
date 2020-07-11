@@ -62,7 +62,7 @@ class Solution:
                 if text1[i-1] == text2[j-1]:
                     dp[i][j] = dp[i-1][j-1] + 1
                 else:
-                    dp[i][j] = max(dp[i-1][j], dp[i][j-1]) 
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])  # 关于dp[i-1][j-1]为什么可以省略，反复再多理解下！！
         return dp[-1][-1]
 
 #时间复杂度：O(N)
