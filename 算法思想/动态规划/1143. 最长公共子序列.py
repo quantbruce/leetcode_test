@@ -67,4 +67,4 @@ class Solution:
 
 #时间复杂度：O(N)
 #空间复杂度：O(1) ？？？？ 不确定
-
+https://labuladong.gitbook.io/algo/dong-tai-gui-hua-xi-lie/zui-chang-gong-gong-zi-xu-lie
