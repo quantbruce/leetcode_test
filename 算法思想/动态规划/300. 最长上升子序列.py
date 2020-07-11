@@ -43,17 +43,37 @@ https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-cha
 
 ################方法2 动态规划的优化     
 
+"""
+执行用时：
+52 ms
+, 在所有 Python3 提交中击败了
+91.06%
+的用户
+内存消耗：
+13.8 MB
+, 在所有 Python3 提交中击败了
+7.89%
+的用户
+"""
 
 
+class Solution:
+    def lengthOfLIS(self, nums: List[int]) -> int:
+        tails = [0] * len(nums)
+        res = 0
+        for num in nums:
+            i, j = 0, res
+            while i < j:
+                m = (i+j)//2
+                if tails[m] < num: 
+                    i = m + 1
+                else:
+                    j = m
+            tails[i] = num
+            if res == j: res += 1
+        return res
+    
+#时间复杂度: O(N*log(N))
+#空间复杂度：O(N)
+https://leetcode-cn.com/problems/longest-increasing-subsequence/solution/zui-chang-shang-sheng-zi-xu-lie-dong-tai-gui-hua-2/
 
-
-
-
-
-
-
-
-
-
-        
-        
