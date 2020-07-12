@@ -49,7 +49,7 @@ class Solution:
         sum_ = sum_ // 2
         dp = [[False for _ in range(sum_+1)] for _ in range(n+1)]
         for i in range(n+1):
-            dp[i][0] = True
+            dp[i][0] = True # 恰好能将背包装满时，就是True. 要理解本题题意
         
         for i in range(1, n+1):
             for j in range(1, sum_+1):
