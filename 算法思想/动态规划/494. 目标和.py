@@ -34,13 +34,13 @@ class Solution:
     def findTargetSumWays(self, nums: List[int], S: int) -> int:
         self.count = 0
         def helper(nums, i, sum_, S):
-            if i == len(nums):
+            if i == len(nums): # 每一轮迭代到最后，来汇总比较下等不等于S，并统计个数
                 if sum_ == S:
                     self.count += 1
                 return 
             else:
-                helper(nums, i+1, sum_+nums[i], S)
-                helper(nums, i+1, sum_-nums[i], S)
+                helper(nums, i+1, sum_+nums[i], S) # 每一次递归循环进去都有加和减两种路可以选
+                helper(nums, i+1, sum_-nums[i], S) 
         helper(nums, 0, 0, S)
         return self.count
         
