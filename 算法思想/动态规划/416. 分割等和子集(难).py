@@ -68,10 +68,38 @@ https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/bei-bao-zi-ji
 ###############方法2 动态规划 (一维)     
 
 
+"""
+执行用时：
+1424 ms
+, 在所有 Python3 提交中击败了
+55.36%
+的用户
+内存消耗：
+13.8 MB
+, 在所有 Python3 提交中击败了
+33.33%
+的用户
+"""
 
 
+class Solution:
+    def canPartition(self, nums: List[int]) -> bool:
+        sum_ = 0
+        n = len(nums)
+        for num in nums:
+            sum_ += num
+        if sum_ & 1 != 0: return False
+        sum_ //= 2
+        dp = [False for _ in range(sum_+1)]
+        dp[0] = True  # 
+        for i in range(n):
+            for j in range(sum_, -1, -1):
+                if j - nums[i] >= 0:
+                    dp[j] = dp[j] or dp[j - nums[i]]
+              
+        return dp[sum_]
+       
+#时间复杂度：O(n*sum_)
+#空间复杂度：O(sum_)
+https://labuladong.gitbook.io/algo/dong-tai-gui-hua-xi-lie/bei-bao-zi-ji
 
-
-
-        
-        
