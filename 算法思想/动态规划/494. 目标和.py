@@ -40,7 +40,7 @@ class Solution:
                 return 
             else:
                 helper(nums, i+1, sum_+nums[i], S) # 每一次递归循环进去都有加和减两种路可以选
-                helper(nums, i+1, sum_-nums[i], S) 
+                helper(nums, i+1, sum_-nums[i], S) # 这个sum_可能是来源上一轮的+ - 各种结果的交织纠缠
         helper(nums, 0, 0, S)
         return self.count
         
