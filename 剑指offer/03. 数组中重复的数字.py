@@ -1,6 +1,18 @@
 https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/pythonti-jie-san-chong-fang-fa-by-xiao-xue-66/
 
-# 排序思路
+###################方法1 排序思路
+"""
+执行用时：
+48 ms
+, 在所有 Python3 提交中击败了
+90.27%
+的用户
+内存消耗：
+23.2 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
 class Solution:
     def findRepeatNumber(self, nums: List[int]) -> int:
         nums.sort()
@@ -9,8 +21,11 @@ class Solution:
             if pre == nums[i]:
                 return pre
             pre = nums[i]
-
             
+#时间复杂度: O(N*log(N))     
+#空间复杂度: O(1)        
+    
+    
 ################方法2 My Methods 字典去重法
 
 """
