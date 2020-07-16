@@ -35,7 +35,7 @@ def QuickSort(nums):
     return Qsort(nums, 0, len(nums)-1)
 
 def Qsort(nums, low, high):
-    if low < high:
+    if low < high:         # 这个地方老写错，注意是if而不是while
         pivot = Partition(nums, low, high)
         Qsort(nums, low, pivot - 1)
         Qsort(nums, pivot + 1, high)
