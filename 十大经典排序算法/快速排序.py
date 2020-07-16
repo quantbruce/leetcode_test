@@ -29,6 +29,7 @@ https://www.runoob.com/python3/python-quicksort.html
 
 ############方法2 C语言版本
 ###这种写法是和王卓老师推荐得一样，非常经典，有利于体验快排的精髓
+###疑惑： 为什么 当nums=[i for i in range(1000, -1, -1)]或者更大，方法1不报错，而放法2却报错 RecursionError: maximum recursion depth exceeded in comparison ？？？？
 
 def QuickSort(nums):
     return Qsort(nums, 0, len(nums)-1)
