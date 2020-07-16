@@ -52,6 +52,8 @@ def Partition(nums, low, high):
     nums[low] = pivot # 把最后那个靠中间的空，用最初的pivot填上
     return low
 
+#时间复杂度：O(N*log(N))
+#空间复杂度：O(1)
 nums = [81, 94, 11, 96, 12, 35, 17, 95, 28, 58, 41, 75, 15]
 print(QuickSort(nums))
 
