@@ -1,7 +1,7 @@
 def ShellSort(nums):
     gap = 1
-    while gap < len(nums)/3:
-        gap = gap * 3 + 1
+    while gap < len(nums)/3: 
+        gap = gap * 3 + 1  # 代码中的3可以改，一起改
     while gap > 0:
         for i in range(gap, len(nums)):
             temp = nums[i]
