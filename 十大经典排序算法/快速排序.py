@@ -27,5 +27,36 @@ https://www.runoob.com/python3/python-quicksort.html
 
 
 
-############方法2 
+############方法2 C语言版本
+###这种写法是和王卓老师推荐得一样，非常经典，有利于体验快排的精髓
 
+def QuickSort(nums):
+    return Qsort(nums, 0, len(nums)-1)
+
+def Qsort(nums, low, high):
+    if low < high:
+        pivot = Partition(nums, low, high)
+        Qsort(nums, low, pivot - 1)
+        Qsort(nums, pivot + 1, high)
+    return nums
+
+def Partition(nums, low, high):
+    pivot = nums[low]
+    while low < high:
+        while low < high and nums[high] >= pivot:
+            high -= 1
+        nums[low] = nums[high]
+        while low < high and nums[low] <= pivot:
+            low += 1
+        nums[high] = nums[low]
+    nums[low] = pivot # 把最后那个靠中间的空，用最初的pivot填上
+    return low
+
+nums = [81, 94, 11, 96, 12, 35, 17, 95, 28, 58, 41, 75, 15]
+print(QuickSort(nums))
+
+https://www.runoob.com/python3/python-quicksort.html
+
+    
+    
+    
