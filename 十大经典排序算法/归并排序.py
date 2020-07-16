@@ -7,7 +7,7 @@ def mergeSort(nums):
 def merge(left, right):
     result = []
     while left and right:
-        if left[0] <= right[0]:
+        if left[0] <= right[0]:  # 这个地方等号有无都可以
             result.append(left.pop(0))
         else:
             result.append(right.pop(0))
