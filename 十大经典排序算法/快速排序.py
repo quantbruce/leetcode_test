@@ -8,6 +8,8 @@ def QuickSort(nums):
     right = [x for x in nums if x > pivot]
     return QuickSort(left) + middle + QuickSort(right)
 
+#时间复杂度：?
+#空间复杂度：?
 nums = [81, 94, 11, 96, 12, 35, 17, 95, 28, 58, 41, 75, 15]
 print(QuickSort(nums))
 
