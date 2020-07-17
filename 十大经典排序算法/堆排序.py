@@ -6,9 +6,9 @@ def heapify(nums, i):
     left = 2 * i + 1
     right = 2 * i + 2
     largest = i
-    while left < numsLen and nums[left] < nums[largest]:
+    while left < numsLen and nums[left] > nums[largest]:  
         largest = left
-    while right < numsLen and nums[right] < nums[largest]:
+    while right < numsLen and nums[right] > nums[largest]:
         largest = right
     if largest != i:
         swap(nums, i, largest)
