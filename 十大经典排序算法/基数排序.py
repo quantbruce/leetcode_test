@@ -3,11 +3,11 @@ def RadixSort(nums):
     max_digit = 1
     max_val = max(nums)
 
-    while 10**max_digit < max_val:
+    while 10**max_digit < max_val: # 注意是10**max_digit
         max_digit = max_digit + 1
 
     while digit < max_digit:
-        temp = [[] for _ in range(10)]
+        temp = [[] for _ in range(10)] # 用[]模拟桶
         for i in nums:
             t = i // 10 ** digit % 10
             temp[t].append(i)
