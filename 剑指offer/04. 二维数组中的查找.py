@@ -13,3 +13,18 @@ class Solution:
             else:
                 return True
         return False
+
+    
+ #### 右上角法    
+class Solution:
+def findNumberIn2DArray(self, matrix: List[List[int]], target: int) -> bool:
+    if not matrix: return False # 加了这行代码
+    i, j = 0, len(matrix[0])-1
+    while i <= len(matrix)-1 and j >= 0:
+        if matrix[i][j] < target:
+            i += 1
+        elif matrix[i][j] > target:
+            j -= 1
+        else:
+            return True
+    return False
