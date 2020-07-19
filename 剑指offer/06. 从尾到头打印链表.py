@@ -13,3 +13,10 @@ class Solution:
 #空间复杂度 O(N)： 辅助栈 stack 和数组 res 共使用O(N)的额外空间
 
 
+################方法2 递归法
+class Solution:
+    def reversePrint(self, head: ListNode) -> List[int]:
+        return self.reversePrint(head.next) + [head.val] if head else []
+    
+#时间复杂度 O(N)： 遍历链表，递归N次。
+#空间复杂度 O(N)： 系统递归需要使用O(N)的栈空间。
