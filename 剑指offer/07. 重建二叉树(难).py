@@ -31,5 +31,6 @@ class Solution(object):
         # 返回当前节点
         return node
 
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/solution/pythonti-jie-qing-xi-di-gui-si-lu-by-xiao-xue-66/
