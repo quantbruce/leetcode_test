@@ -28,3 +28,8 @@ def findNumberIn2DArray(self, matrix: List[List[int]], target: int) -> bool:
         else:
             return True
     return False
+
+
+时间复杂度 O(M+N)：其中，NN 和 MM 分别为矩阵行数和列数，此算法最多循环 M+NM+N 次。
+空间复杂度 O(1)O: i, j 指针使用常数大小额外空间。
+
