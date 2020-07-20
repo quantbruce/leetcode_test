@@ -8,7 +8,7 @@ class Solution:
             else: j -= 1  # 这一部的分情况讨论很见功底，多理解下
         return numbers[i]
 
-#时间复杂度：O(log(n))
+#时间复杂度：O(log(n)) 在特例情况下（例如 [1, 1, 1, 1]），会退化到 O(N)
 #空间复杂度：O(1)
 https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/
 
