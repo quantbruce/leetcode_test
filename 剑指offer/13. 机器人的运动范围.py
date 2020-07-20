@@ -9,7 +9,8 @@ class Solution:
 
         visited = set()
         return dfs(0, 0, 0, 0)
-
+#时间复杂度： 最差情况下，机器人遍历矩阵所有单元格，此时时间复杂度为 O(MN)
+#空间复杂度： 最差情况下，Set visited 内存储矩阵所有单元格的索引，使用 O(MN)的额外空间。
 
 #######解法一：BFS(Breadth Frist Search)
 
