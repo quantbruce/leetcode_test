@@ -2,7 +2,7 @@
 
 class Solution:
     def movingCount(self, m: int, n: int, k: int) -> int:
-        def dfs(i, j, si, sj):
+        def dfs(i, j, si, sj):                                      # 不能重复访问已经访问过的元素，否则算个数相当于会重复计算
             if not 0 <= i < m or not 0 <= j < n or k < si + sj or (i, j) in visited: return 0
             visited.add((i,j))
             return 1 + dfs(i + 1, j, si + 1 if (i + 1) % 10 else si - 8, sj) + dfs(i, j + 1, si, sj + 1 if (j + 1) % 10 else sj - 8)
