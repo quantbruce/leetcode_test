@@ -5,7 +5,7 @@ class Solution:
             m = (i + j) // 2
             if numbers[m] > numbers[j]: i = m + 1
             elif numbers[m] < numbers[j]: j = m
-            else: j -= 1  # 这一部的分情况讨论很见功底，多理解下
+            else: j -= 1  # 这一部的分情况讨论很见功底，多理解下，最后部分题解还没能理解。
         return numbers[i]
 
 #时间复杂度：O(log(n)) 在特例情况下（例如 [1, 1, 1, 1]），会退化到 O(N)
