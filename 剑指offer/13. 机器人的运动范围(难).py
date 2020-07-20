@@ -25,5 +25,6 @@ class Solution:
             queue.append((i, j + 1, si, sj + 1 if (j + 1) % 10 else sj - 8))
         return len(visited)
 
-
+#时间复杂度： 最差情况下，机器人遍历矩阵所有单元格，此时时间复杂度为 O(MN)
+#空间复杂度： 最差情况下，Set visited 内存储矩阵所有单元格的索引，使用 O(MN)的额外空间。
 https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/solution/mian-shi-ti-13-ji-qi-ren-de-yun-dong-fan-wei-dfs-b/
