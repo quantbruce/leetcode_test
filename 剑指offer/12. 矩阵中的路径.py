@@ -15,5 +15,6 @@ class Solution:
                 if dfs(i, j, 0): return True
         return False
 
-
+#时间复杂度：O(3^k * M*N)
+#空间复杂度：O(K), 最坏情况O(MN)
 https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/solution/mian-shi-ti-12-ju-zhen-zhong-de-lu-jing-shen-du-yo/
