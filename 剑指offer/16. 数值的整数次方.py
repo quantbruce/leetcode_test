@@ -8,6 +8,7 @@ class Solution:
             x *= x
             n >>= 1
         return res
-
-
+    
+#时间复杂度：O(logN)
+#空间复杂度：O(1)
 https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/mian-shi-ti-16-shu-zhi-de-zheng-shu-ci-fang-kuai-s/
