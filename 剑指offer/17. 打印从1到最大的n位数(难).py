@@ -15,7 +15,7 @@ class Solution:
                     if i==9: self.nine += 1
                     num[x] = str(i)
                     dfs(x+1)
-                self.nine -= 1
+                self.nine -= 1 #回溯每跳出一层，数位减少一个，9的数目自然要减少1
 
         num, res = ['0']*n, []
         self.nine = 0
