@@ -15,6 +15,7 @@ https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/solution/mi
 ########方法2 剑指原题意解法
 """
 （以下代码由于题目类型不符无法通过，供参考）
+有些难理解，日后细啃
 """
 class Solution:
     def deleteNode(self, head, val):
