@@ -11,6 +11,8 @@ class Solution:
         else:                                                                        # 例如，s = "aab" , p = "b*aab" 就是满足这种场景
             return first_match and self.isMatch(s[1:], p[1:])
 
+#时间复杂度：O() ???
+#空间复杂度：O(1)
 https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/solution/hui-su-dong-tai-gui-hua-by-ml-zimingmeng/
 
 
