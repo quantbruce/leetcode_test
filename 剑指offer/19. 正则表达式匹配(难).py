@@ -16,3 +16,7 @@ class Solution:
 https://leetcode-cn.com/problems/zheng-ze-biao-da-shi-pi-pei-lcof/solution/hui-su-dong-tai-gui-hua-by-ml-zimingmeng/
 
 
+################方法2 动态规划
+"""
+日后细究
+"""
