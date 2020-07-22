@@ -51,3 +51,19 @@ class Solution:
 #时间复杂度：O(N)
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/symmetric-tree/solution/di-gui-die-dai-bi-xu-miao-dong-by-sweetiee/
+    
+    
+###对方法2进行代码优化缩减后
+class Solution:
+    def isSymmetric(self, root: TreeNode) -> bool:
+        if not root: return True
+        queue = []
+        queue.extend([root.left, root.right])
+        while queue:
+            node1, node2 = queue.pop(0), queue.pop(0) # 这样写照样是AC的，说明，queue里的元素删除后实际上是发生变化的，有更新
+            if not node1 and not node2: continue
+            if not node1 or not node2 or node1.val!=node2.val: return False
+            queue.extend([node1.left, node2.right, node1.right, node2.left])
+        return True
+    
+    
