@@ -35,21 +35,13 @@ class Solution:
         if not root: return 
         stack = [root]
         while stack:
-            node = stack.pop() # node = stack.pop(0) 这样写 就相当于队列，照样可以AC
+            node = stack.pop() # node = stack.pop(0) 这样写 就相当于队列，照样可以AC, 只是前后遍历左右子树的顺序不同了
             if node.left: stack.append(node.left)
             if node.right: stack.append(node.right)
             node.left, node.right = node.right, node.left
         return root
 #时间复杂度：O(N)        
 #空间复杂度：O(N)
-
-
-
-
-
-
-
-
 
 
 
