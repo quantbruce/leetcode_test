@@ -10,3 +10,6 @@ class Solution:
                 self.B.append(nums[i])
         res = self.A + self.B
         return res
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+
