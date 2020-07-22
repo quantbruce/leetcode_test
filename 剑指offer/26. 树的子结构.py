@@ -22,9 +22,10 @@ class Solution:
             return recur(A.left, B.left) and recur(A.right, B.right)
 
         return bool(A and B) and (recur(A, B) or self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B))
-
+    
+# 时间复杂度：O(M*N)
+# 空间复杂度：O(M)
 
 https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/solution/mian-shi-ti-26-shu-de-zi-jie-gou-xian-xu-bian-li-p/
 
-    
     
