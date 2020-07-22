@@ -12,3 +12,7 @@ class Solution:
         while former:
             former,latter = former.next,latter.next
         return latter
+    
+#时间复杂度：O(N)
+#空间复杂度：O(1)
+https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/solution/mian-shi-ti-22-lian-biao-zhong-dao-shu-di-kge-j-11/
