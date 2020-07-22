@@ -27,7 +27,7 @@ class Solution:
         return root
 #时间复杂度：O(N)        
 #空间复杂度：O(N)
-
+https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/solution/mian-shi-ti-27-er-cha-shu-de-jing-xiang-di-gui-fu-/
 
 ##############方法3 Krahets 迭代法 (用栈)
 class Solution:
@@ -42,6 +42,6 @@ class Solution:
         return root
 #时间复杂度：O(N)        
 #空间复杂度：O(N)
-
+https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/solution/mian-shi-ti-27-er-cha-shu-de-jing-xiang-di-gui-fu-/
 
 
