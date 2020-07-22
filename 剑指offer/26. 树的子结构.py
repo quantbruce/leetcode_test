@@ -19,9 +19,9 @@ class Solution:
         def recur(A, B):
             if not B: return True
             if not A or A.val != B.val: return False
-            return recur(A.left, B.left) and recur(A.right, B.right)
+            return recur(A.left, B.left) and recur(A.right, B.right) # 这里是and连接
 
-        return bool(A and B) and (recur(A, B) or self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B))
+        return bool(A and B) and (recur(A, B) or self.isSubStructure(A.left, B) or self.isSubStructure(A.right, B)) # 连接条件细节注意，还有B不变
     
 # 时间复杂度：O(M*N)
 # 空间复杂度：O(M)
