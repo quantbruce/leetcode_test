@@ -24,3 +24,5 @@ class Solution:
         return nums
 #时间复杂度：O(N)
 #空间复杂度：O(1)
+
+https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/solution/mian-shi-ti-21-diao-zheng-shu-zu-shun-xu-shi-qi-4/
