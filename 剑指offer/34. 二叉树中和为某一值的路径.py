@@ -20,8 +20,8 @@ class Solution:
             if not root: return
             path.append(root.val)
             tar -= root.val
-            if tar == 0 and not root.left and not root.right:
-                res.append(list(path))   #体会下为什么要加这个list()
+            if tar == 0 and not root.left and not root.right:        #对于输入样例[5,4,8,11,null,13,4,7,2,null,null,5,1]来，
+                res.append(list(path))   #体会下为什么要加这个list()。 说，如果不这样写的话后面pop删除的是单个元素2，这样括起来后，后面pop删除的才是整条路径[5,4,11,2]
             recur(root.left, tar)
             recur(root.right, tar)
             path.pop()  # 结合题解PPT，在脑海中在现这行代码，体会其必要性
