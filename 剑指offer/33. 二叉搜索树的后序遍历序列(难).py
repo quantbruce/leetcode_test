@@ -14,6 +14,7 @@ class Solution(object):
 #空间复杂度：O(N)
 
 ##########################################这种方法很费解，还没吃透。吃了一下午，后续反复肯！！！！
+###日后细究
 class Solution:
     def verifyPostorder(self, postorder: [int]) -> bool:
         stack, root = [], float("+inf")
