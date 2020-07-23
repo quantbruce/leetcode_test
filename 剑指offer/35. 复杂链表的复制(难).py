@@ -27,8 +27,7 @@ class Solution:
 ####################方法3 BFS
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
-        visited = {}
-    
+        visited = {}    
         def bfs(head):
             if not head: return head
             clone = Node(head.val, None, None) # 创建新结点
@@ -47,7 +46,10 @@ class Solution:
                 visited[tmp].random = visited.get(tmp.random)
             return clone  ####################################??????????????????， 看清答主解释，clone是复制后的链表的头节点
         return bfs(head)
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+    
+    
 ########我默写的方法3 
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
@@ -60,7 +62,7 @@ class Solution:
             while queue:
                 tmp = queue.pop(0) # pop(0)也能AC, 感觉这样更符合队列的味道
                 if tmp.next and tmp.next not in visited:
-                    visited[tmp.next] = Node(tmp.next.val, None, None)
+                    visited[tmp.next] = Node(tmp.next.val, None, None) # 这里写成None或者[]都是可以的
                     queue.append(tmp.next)
                 if tmp.random and tmp.random not in visited:
                     visited[tmp.random] = Node(tmp.random.val, None, None)
@@ -69,7 +71,8 @@ class Solution:
                 visited[tmp].random = visited.get(tmp.random) #同样，visited[tmp.random]也会报错，非空报错
             return clone
         return bfs(head)
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
 
 
 ######################方法4 迭代
