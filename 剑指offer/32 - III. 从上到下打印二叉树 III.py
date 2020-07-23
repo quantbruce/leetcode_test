@@ -13,8 +13,10 @@ class Solution:
                 if node.right: queue.append(node.right)
             res.append(tmp[::-1] if len(res) % 2 else tmp)
         return res
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
     
+
 ##########方法2 
 class Solution:
     from collections import deque
@@ -32,6 +34,7 @@ class Solution:
             res.append(list(tmp))
         return res
     
+
 
 ###至于倒数第二行为何要加list(tmp)，看以下代码即懂
 from collections import deque
