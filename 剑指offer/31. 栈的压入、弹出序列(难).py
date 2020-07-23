@@ -25,6 +25,8 @@ class Solution:
                 stack.pop()
                 j += 1
         return not stack
-
+    
+#时间复杂度：O(N)
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/solution/tan-xin-by-z1m/
 
