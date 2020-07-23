@@ -21,7 +21,8 @@ class MinStack:
 
     def min(self) -> int:
         return self.B[-1]
-        
  
-   https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/solution/mian-shi-ti-30-bao-han-minhan-shu-de-zhan-fu-zhu-z/
+#时间复杂度：O(1)
+#空间复杂度：O(N)
+https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/solution/mian-shi-ti-30-bao-han-minhan-shu-de-zhan-fu-zhu-z/
        
