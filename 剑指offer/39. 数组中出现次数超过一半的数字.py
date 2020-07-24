@@ -6,7 +6,8 @@ class Solution:
             return nums[0]
         nums.sort()
         return nums[int(len(nums)/2)] #通过观察规律可得，满足这样条件的数必过nums中点
-        
+#时间复杂度: O(N)
+#空间复杂度：O(1)
         
  ######
  class Solution:
