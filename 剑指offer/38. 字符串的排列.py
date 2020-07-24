@@ -29,8 +29,9 @@ class Solution:
                 c[i], c[x] = c[x], c[i] # 恢复交换
         dfs(0)
         return res
-
-
+    
+#时间复杂度: O(N!)
+#空间复杂度：O(N**2)
 
 
 https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/mian-shi-ti-38-zi-fu-chuan-de-pai-lie-hui-su-fa-by/
