@@ -9,7 +9,9 @@ class Solution:
 #时间复杂度: O(N)
 #空间复杂度：O(1)
         
- ######
+###################摩尔投票法，有些技巧性
+########新颖 务必掌握
+
  class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         votes = 0
@@ -18,6 +20,8 @@ class Solution:
             votes += 1 if num == x else -1
         return x
 
+#时间复杂度: O(N)
+#空间复杂度：O(1)
 https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/solution/mian-shi-ti-39-shu-zu-zhong-chu-xian-ci-shu-chao-3/
 
 
