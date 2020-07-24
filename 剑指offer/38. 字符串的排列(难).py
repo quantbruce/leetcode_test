@@ -1,3 +1,5 @@
+
+##############方法1 递归法
 """
 执行用时 :
 120 ms
@@ -10,8 +12,6 @@
 100.00%
 的用户
 """
-
-
 
 class Solution:
     def permutation(self, s: str) -> List[str]:
