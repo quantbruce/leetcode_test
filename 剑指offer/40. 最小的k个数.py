@@ -20,8 +20,10 @@ https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/solution/bu-pai-xu-bu-
 ########################方法2 快排
 
 
+########################方法3 堆排序
 
-########################方法3 python sort()法
+
+########################方法4 python sort()法
 class Solution:
     def getLeastNumbers(self, arr: List[int], k: int) -> List[int]:
         arr.sort()
