@@ -17,8 +17,8 @@ class Solution:
             digit *= 10
         return res
 # 时间复杂度O(log n)：循环内的计算操作使用O(1)时间；循环次数为数字n的位数，即 \log_{10}{n}log 10n ，因此循环使用O(logn) 时间。
-# 空间复杂度 O(1)O(1) ： 几个变量使用常数大小的额外空间。
-
+# 空间复杂度 O(1)： 几个变量使用常数大小的额外空间。
+https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/solution/mian-shi-ti-43-1n-zheng-shu-zhong-1-chu-xian-de-2/
 
 
 
