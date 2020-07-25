@@ -1,3 +1,37 @@
+####################方法1 Krahets数学拆解
+########这种分情况讨论解法很经典，务必记住！
+
+"""
+执行用时：
+44 ms
+, 在所有 Python3 提交中击败了
+39.99%
+的用户
+内存消耗：
+13.6 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
+class Solution:
+    def findNthDigit(self, n: int) -> int:
+        digit, start, count = 1, 1, 9
+        while n > count:
+            n -= count
+            start *= 10
+            digit += 1
+            count = digit * start * 9
+        num = start + (n-1)//digit
+        return int(str(num)[(n-1)%digit])  ####将 num转化为字符串使用O(logn)时间？？？为什么是这样？
+    
+#时间复杂度：O(logN)
+#空间复杂度：O(logN)???????????
+https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/solution/mian-shi-ti-44-shu-zi-xu-lie-zhong-mou-yi-wei-de-6/
+
+
+
+####################方法2 
 """
 执行用时 :
 36 ms
