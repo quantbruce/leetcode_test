@@ -6,7 +6,7 @@ class Solution:
             nums[a]+=1
         output=[]
         i = 0
-        while len(output)<k: # 这个地方len(output)写错
+        while len(output)<k: # 这个地方默写len(output)错了
             if nums[i]>0:
                 for _ in range(nums[i]):
                     output.append(i)
