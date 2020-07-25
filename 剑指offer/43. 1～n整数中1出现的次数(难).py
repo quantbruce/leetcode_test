@@ -1,4 +1,28 @@
-######
+################方法1 Krahets 拆分所有情况法
+#####这个解法以及思路很经典，值得记住！
+#####反复多看题解PPT
+
+
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        digit, res = 1, 0
+        high, cur, low = n // 10, n % 10,  0
+        while high != 0 or cur != 0:  # 这个连接条件是or, 容易写错成and
+            if cur == 0: res += digit*high
+            elif cur == 1: res += digit*high + low + 1
+            else: res += (high + 1) * digit
+            low += cur * digit
+            cur = high % 10
+            high //= 10
+            digit *= 10
+        return res
+# 时间复杂度O(log n)：循环内的计算操作使用O(1)时间；循环次数为数字n的位数，即 \log_{10}{n}log 10n ，因此循环使用O(logn) 时间。
+# 空间复杂度 O(1)O(1) ： 几个变量使用常数大小的额外空间。
+
+
+
+
+############# 方法2 
 """
 执行用时 :
 32 ms
