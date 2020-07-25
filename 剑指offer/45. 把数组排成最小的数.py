@@ -10,7 +10,7 @@
 100.00%
 的用户
 """
-########暴力法
+########方法1 两次线性扫描暴力法
 class Solution:
     def minNumber(self, nums: List[int]) -> str:
         n = len(nums)
@@ -23,7 +23,9 @@ class Solution:
                 if nums[i] + nums[j] > nums[j] + nums[i]:
                     nums[i], nums[j] = nums[j], nums[i]
         return "".join(nums)
-        
+    
+#时间复杂度：O(N**2)
+#空间复杂度：O(1)
   
   
 """
@@ -49,8 +51,6 @@ class Solution:
         res=sorted(map(str, nums),key=cmpSmaller)
         smallest = ''.join(res)
         return smallest
-
-
 
 https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/solution/python3jian-dan-chu-li-by-bigkjp97/
 
