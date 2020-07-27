@@ -11,7 +11,8 @@
 的用户
 """
 
-########DP
+###############################方法1  DP
+###细节，要注意不等号取值的方向
 class Solution:
     def nthUglyNumber(self, n: int) -> int:
         dp, a, b, c = [1]*n, 0, 0, 0
