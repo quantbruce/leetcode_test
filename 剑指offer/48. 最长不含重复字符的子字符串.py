@@ -1,3 +1,5 @@
+###############方法1 滑动窗口法
+
 """
 执行用时 :
 84 ms
@@ -25,6 +27,34 @@ class Solution:
                 while s[tail] in s[head:tail]:  # 因为窗口中相等的元素若不在左端点，则需要移动多次，所以需要while循环
                     head += 1
         return res
+#时间复杂度：O(N**2)  尝试用abcd...z这样的例子来理解
+#空间复杂度：O(1)
+    
+    
+#################方法2 滑动窗口法的优化
 
-    
-    
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        n = len(s)
+        head, res = 0, 0
+        hashmap = {}
+        for tail in range(n):
+            if s[tail] in hashmap:
+                head = max(hashmap[s[tail]], head) 
+            hashmap[s[tail]] = tail + 1 # 不管在不在, tail下标都要向后移一位, 这样代码好好体会
+            res = max(tail-head+1, res)
+        return res
+3时间复杂度：O(N)
+#空间复杂度：O(N)
+
+
+
+
+
+
+
+
+
+
+
+
