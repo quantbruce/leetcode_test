@@ -49,7 +49,7 @@ class Solution:
             else: j = m - 1
         left = j
         
-        return right - left - 1
+        return right - left - 1 
 
 链接：https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/solution/mian-shi-ti-53-i-zai-pai-xu-shu-zu-zhong-cha-zha-5/
 
