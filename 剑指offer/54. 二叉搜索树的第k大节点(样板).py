@@ -1,3 +1,19 @@
+##################方法1 迭代法求解 
+#### 样板戏。样板题。无需多言，记住！
+
+"""
+执行用时：
+48 ms
+, 在所有 Python3 提交中击败了
+99.70%
+的用户
+内存消耗：
+17.8 MB
+, 在所有 Python3 提交中击败了
+100.00%
+的用户
+"""
+
 class Solution:
     def kthLargest(self, root: TreeNode, k: int) -> int:
         if not root: return 
@@ -9,9 +25,16 @@ class Solution:
                 root = root.right
             root = stack.pop()
             res.append(root.val)
-            if len(res)==k: return res[-1]
+            if len(res)==k: return res[-1] # 第K大的节点和res[]的第K个数巧妙地联系到了一起
             root = root.left  # 没有左孩子节点，循环就不往右走
-        return
-
+            
+#时间复杂度：O(N) 注意其实是比N要小的，因为带有剪枝效应 
+#空间复杂度：O(N)
 
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/solution/python-zhong-xu-bian-li-you-gen-zuo-by-janciswang/
+
+    
+################方法2 递归法求解 Krahets
+    
+    
+    
