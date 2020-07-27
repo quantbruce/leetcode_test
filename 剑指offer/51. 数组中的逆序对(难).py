@@ -70,7 +70,7 @@ class Solution:
         for k in range(j, r+1):
             tmp[pos] = nums[k]
             pos+=1
-        nums[l:r+1] = tmp[l:r+1]  # 覆盖了原数组，为什么要这一行？
+        nums[l:r+1] = tmp[l:r+1]  # 覆盖了原数组，为什么要这一行？， 不写成nums = tmp是为了防止生成新的对象
         return inv_count
 
     def reversePairs(self, nums: List[int]) -> int:
