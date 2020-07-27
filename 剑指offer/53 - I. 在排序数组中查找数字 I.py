@@ -11,6 +11,7 @@ class Solution:
 
 
 ############二分查找
+####查两次，就相当于分别查出左右边界
 class Solution:
     def search(self, nums: [int], target: int) -> int:
         i, j = 0, len(nums) - 1
