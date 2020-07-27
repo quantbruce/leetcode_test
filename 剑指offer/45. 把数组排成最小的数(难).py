@@ -54,7 +54,7 @@ class Solution:
 
 https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/solution/python3jian-dan-chu-li-by-bigkjp97/
 https://blog.csdn.net/LaoYuanPython/article/details/95218694  # python中的富比较方法 __lt__  __gt__
-  
+https://blog.csdn.net/besmarterbestronger/article/details/101217761  # python中的富比较方法案例
   
   
   
