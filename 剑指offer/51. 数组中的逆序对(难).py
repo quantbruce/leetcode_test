@@ -62,7 +62,7 @@ class Solution:
                 j+=1
             pos+=1
 
-        for k in range(i,mid+1):  # 不是很理解接下来这两个for循环
+        for k in range(i,mid+1):  # 不是很理解接下来这两个for循环, 相当于上面左右两个区间[l, mid] [mid+1, r]一部分指针遍历完了，另一部分指针还没走完。就是这种断尾的情况
             tmp[pos] = nums[k]
             inv_count += (j - (mid+1))
             pos += 1
@@ -70,14 +70,16 @@ class Solution:
         for k in range(j, r+1):
             tmp[pos] = nums[k]
             pos+=1
-        nums[l:r+1] = tmp[l:r+1]
+        nums[l:r+1] = tmp[l:r+1]  # 覆盖了原数组，为什么要这一行？
         return inv_count
 
     def reversePairs(self, nums: List[int]) -> int:
-        n = len(nums)
-        tmp = [0] * n
+        n = len(nums)             
+        tmp = [0] * n             # 因为相当于给nums弄了个分身的感觉
         return self.mergeSort(nums, tmp, 0, n-1)
-
+    
+#时间复杂度: O(N*log(N))
+#空间复杂度: O(N)
 
 https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/shu-zu-zhong-de-ni-xu-dui-by-leetcode-solution/
 
