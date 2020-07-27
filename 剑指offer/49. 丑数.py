@@ -20,7 +20,7 @@ class Solution:
             n2, n3, n5 = dp[a]*2, dp[b]*3, dp[c]*5
             dp[i] = min(n2, n3 ,n5)
             if dp[i] == n2: a+=1  # 下一轮的每个dp[i]都是由上一轮的三个n2,n3,n5比较取最小而得
-            if dp[i] == n3: b+=1
-            if dp[i] == n5: c+=1
+            if dp[i] == n3: b+=1  # dp[i]只可能来源于这三种情况，后面两个if不能写作elif, 因为很多时候，n2,n3,n5之间会存在相等，
+            if dp[i] == n5: c+=1  # 则此时所有相当的情况，对应下标都要加1
         return dp[-1]
 
