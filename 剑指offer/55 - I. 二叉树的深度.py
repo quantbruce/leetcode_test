@@ -14,7 +14,7 @@ class Solution:
         queue, res = [root], 0  ### queue=[], queue.append(root) 也可以写成这样。
         while queue:
             tmp = []
-            for node in queue:
+            for node in queue:      # 这行代码写漏了，后面要加强记忆
                 if node.left: tmp.append(node.left)
                 if node.right: tmp.append(node.right)
             queue = tmp  # 这行代码放不放在for循环内部都是对的，但是放在外面效率高一些
