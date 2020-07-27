@@ -22,7 +22,9 @@ class Solution:
             b = a
             a = c
         return a
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+    
 class Solution:
     def translateNum(self, num: int) -> int:
         a = b = 1
@@ -57,3 +59,6 @@ class Solution:
             a, b = c,a
             y = x 
         return a
+    
+#时间复杂度：O(N)
+#空间复杂度：O(1)
