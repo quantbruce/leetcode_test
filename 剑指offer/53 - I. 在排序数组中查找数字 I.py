@@ -18,7 +18,7 @@ class Solution:
             m = (i + j) // 2
             if nums[m] <= target: i = m + 1
             else: j = m - 1
-        right = i
+        right = i  # 没想到用两次while, 并且right=i也没考虑到
 
         i, j = 0, len(nums) - 1
         while i <= j:
