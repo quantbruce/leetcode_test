@@ -17,9 +17,10 @@ class Solution:
             else:
                 node2 = headA
         return node1
+#时间复杂度：O(M+N)
+#空间复杂度：O(1)
         
-        
- ##或者简写如下
+############或者简写如下
  class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         node1, node2 = headA, headB
