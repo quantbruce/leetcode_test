@@ -1,3 +1,4 @@
+###################方法1 动态规划
 class Solution:
     def maxValue(self, grid: List[List[int]]) -> int:
         for i in range(len(grid)):
@@ -7,8 +8,13 @@ class Solution:
                 elif j == 0: grid[i][j] += grid[i - 1][j]
                 else: grid[i][j] += max(grid[i][j - 1], grid[i - 1][j])
         return grid[-1][-1]
+    
+#时间复杂度：O(M*N)
+#空间复杂度：O(1)
 
 
+
+#################方法2 优化后的动态规划
 """
 执行用时 :
 52 ms
@@ -31,6 +37,8 @@ class Solution:
             for j in range(1, len(grid[0])):
                 grid[i][j] += max(grid[i][j - 1], grid[i - 1][j])
         return grid[-1][-1]
-
+    
+#时间复杂度：O(M*N)
+#空间复杂度：O(1)
 https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/solution/mian-shi-ti-47-li-wu-de-zui-da-jie-zhi-dong-tai-gu/
 
