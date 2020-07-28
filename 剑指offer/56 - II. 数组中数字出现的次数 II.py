@@ -40,5 +40,14 @@ class Solution:
 #时间复杂度：O(N)
 #空间复杂度：O(N)
             
-            
-            
+    
+#######################方法2 Krahets  位运算 + 有限状态自动机，清晰图解
+###日后细究
+
+
+
+#时间复杂度：O(N)
+#空间复杂度：O(1)
+https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/solution/mian-shi-ti-56-ii-shu-zu-zhong-shu-zi-chu-xian-d-4/
+    
+    
