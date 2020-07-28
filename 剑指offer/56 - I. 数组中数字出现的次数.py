@@ -51,3 +51,26 @@ class Solution:
                 del dic[num]
         return list(dic.keys())
 
+############### 方法3 位运算法
+
+class Solution:
+    def singleNumbers(self, nums: List[int]) -> List[int]:
+        ret = 0
+        a = b = 0
+        for num in nums:
+            ret ^= num
+        h = 1
+        while ret&h==0:
+            h <<= 1
+        for num in nums:
+            if num & h==0:
+                a^=num
+            else:
+                b^=num
+        return [a, b]
+    
+#时间复杂度：O(N)
+#空间复杂度：O(1)
+https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-by-leetcode/
+
+    
