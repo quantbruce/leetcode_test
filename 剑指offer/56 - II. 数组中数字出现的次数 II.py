@@ -27,3 +27,18 @@ class Solution:
         return res[0]
 
 
+####进行简化后
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        dic = {}
+        for num in nums:
+            dic[num] = dic.get(num, 0)+1
+        
+        for k,v in dic.items():
+            if v==1:
+                return k
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+            
+            
+            
