@@ -29,7 +29,17 @@ class Solution:
             else: return nums[i], nums[j]
         return []
 
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        i, j = 0, len(nums)-1
+        while i < j:
+            if nums[i] + nums[j] < target: j -= 1
+            elif nums[i] + nums[j] > target: i += 1 #####这样写是错误的，因为代码走到这行 j的值很可能已经改变了。后面结果都会错
+            else: return [nums[i], nums[j]]
+        return []
 
+    
+    
 链接：https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/solution/mian-shi-ti-57-he-wei-s-de-liang-ge-shu-zi-shuang-/
 
     
