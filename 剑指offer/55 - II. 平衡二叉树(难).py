@@ -18,11 +18,19 @@ https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-
 
     
 #############方法二：先序遍历 + 判断深度 （从顶至底）
-###容易想到，但是容易产生大量重复计算，低效. 日后细究
+###容易想到，但是容易产生大量重复计算，低效.
 
+class Solution:
+    def isBalanced(self, root: TreeNode) -> bool:
+        if not root: return True
+        return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and \
+            self.isBalanced(root.left) and self.isBalanced(root.right)
 
+    def depth(self, root):
+        if not root: return 0
+        return max(self.depth(root.left), self.depth(root.right)) + 1
 
-#时间复杂度：O(N*log(N))
+#时间复杂度：O(N*log(N)) 需要仔细多理解下
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-55-ii-ping-heng-er-cha-shu-cong-di-zhi/
 
