@@ -9,14 +9,18 @@ class Solution:
                 if sum(nums[i:j+1])==target:
                     res.append(nums[i:j+1])   
         return res
+    
+#时间复杂度：O(N**2)
+#空间复杂度：O(N)
         
-        
-#############################双指针算法(通向移动的双指针)
+
+    
+#############################双指针算法(同向移动的双指针)
 class Solution:
     def findContinuousSequence(self, target: int) -> List[List[int]]:
         i,j = 0,1
         res = []
-        mid = target//2 + 2
+        mid = target//2 + 2  # mid = target // 2 +2 是点睛之笔，可以确保在i和j分别在[0, mid-1], [0, mid]范围内遍历出答案，减少了后半部分区间的多余遍历。提高效率
         nums = list(range(1, mid))
         while i<=mid-1 and j<mid:
             total = sum(nums[i:j+1]) #如果是nums[i:j]也不会报错，只是会包含i与j重合的情况，计算成本高一些
