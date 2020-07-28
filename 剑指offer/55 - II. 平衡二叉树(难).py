@@ -1,9 +1,4 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+############## 方法1：后序遍历 + 剪枝 （从底至顶）
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
