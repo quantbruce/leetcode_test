@@ -18,7 +18,7 @@ https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-
 
     
 #############方法二：先序遍历 + 判断深度 （从顶至底）
-###容易想到，但是容易产生大量重复计算，低效
+###容易想到，但是容易产生大量重复计算，低效. 日后细究
 
 
 
