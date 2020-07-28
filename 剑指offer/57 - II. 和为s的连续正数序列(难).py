@@ -33,6 +33,7 @@ class Solution:
                 i+=1
                 j+=1
         return res
-      
+#时间复杂度:O(target) or O(N)
+#空间复杂度:O(1)
  https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/solution/nei-cun-xiao-hao-153mzhan-sheng-100de-pythonyong-h/
    
