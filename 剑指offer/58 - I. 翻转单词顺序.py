@@ -65,11 +65,7 @@ class Solution:
         strs = s.split() # 分割字符串
         strs.reverse() # 翻转单词列表
         return ' '.join(strs) # 拼接为字符串并返回
-
+#时间复杂度：Krahets分析得非常好，多去看下体会下
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/solution/mian-shi-ti-58-i-fan-zhuan-dan-ci-shun-xu-shuang-z/
-
-    
-    
-    
-    
-        
+      
