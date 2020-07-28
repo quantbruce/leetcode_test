@@ -20,9 +20,9 @@ class Solution:
     def findContinuousSequence(self, target: int) -> List[List[int]]:
         i,j = 0,1
         res = []
-        mid = target//2 + 2  # mid = target // 2 +2 是点睛之笔，可以确保在i和j分别在[0, mid-1], [0, mid]范围内遍历出答案，减少了后半部分区间的多余遍历。提高效率
+        mid = target//2 + 2  #是点睛之笔，可以确保在i和j分别在[0, mid-1], [0, mid]范围内遍历出答案，减少了后半部分区间(任意两个数相加都必然>target)的多余遍历。提高效率
         nums = list(range(1, mid))
-        while i<=mid-1 and j<mid:
+        while i<=mid-1 and j<=mid: # 本来是加1就可以了，考虑到range(1,mid), 只能取到mid-1, 所以写mid = target // 2 +2 
             total = sum(nums[i:j+1]) #如果是nums[i:j]也不会报错，只是会包含i与j重合的情况，计算成本高一些
             if total > target:
                 i += 1
