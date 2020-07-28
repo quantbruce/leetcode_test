@@ -21,8 +21,7 @@
 
 作者：quantbruce
 链接：https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/solution/jie-jin-shuang-100-zi-dian-si-lu-jian-dan-yi-li-ji/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 
 class Solution:
     def singleNumbers(self, nums: List[int]) -> List[int]:
