@@ -38,10 +38,11 @@ class Solution:
         pre = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
         for i in range(2, n+1):
             tmp = [0]*(5*i+1)
-            for j in range(len(pre)):
-                for x in range(6):
-                    tmp[j+x] += pre[j]/6
+            for x in range(len(pre)):
+                for y in range(6):
+                    tmp[x+y] += pre[x]/6
             pre = tmp
         return pre
-        
+#时间复杂度：O(N**2) ??
+#空间复杂度：O(N**2) ??
 https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/solution/java-dong-tai-gui-hua-by-zhi-xiong/
