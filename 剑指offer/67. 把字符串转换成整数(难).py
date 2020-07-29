@@ -27,7 +27,8 @@ class Solution:
             res = 10 * res + ord(c) - ord('0') # 数字拼接, c不用加引号，0要加！
             if res > max_int: return max_int if sign == 1 else -max_int - 1 # 数字越界处理
         return sign * res
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/solution/mian-shi-ti-67-ba-zi-fu-chuan-zhuan-huan-cheng-z-4/
 
     
