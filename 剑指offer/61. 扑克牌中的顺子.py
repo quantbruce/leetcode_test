@@ -52,7 +52,7 @@ class Solution:
 
 class Solution:
     def isStraight(self, nums: List[int]) -> bool:
-        ma, mi = 0, 14
+        ma, mi = 0, 14 #最开始反过来设的技巧
         repeat = set()
         for num in nums:
             if num==0: continue
@@ -64,7 +64,7 @@ class Solution:
 
 #时间复杂度：O(N)
 #空间复杂度：O(N)
-
+https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/solution/mian-shi-ti-61-bu-ke-pai-zhong-de-shun-zi-ji-he-se/
 
 
 ################方法3 排序 + 遍历 Krahets
