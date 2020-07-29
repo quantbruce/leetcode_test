@@ -24,5 +24,6 @@ class Solution:
         for i in range(n):
             L[i] = L[i] * R[i]
         return L
-
+#时间复杂度：O(N)
+#空间复杂度：O(N)
 https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/solution/liang-tang-bian-li-by-z1m/
