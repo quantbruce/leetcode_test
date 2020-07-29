@@ -50,7 +50,6 @@ class Solution:
 
 ################方法2 Krahets 线性遍历+集合法  最优
 
-
 class Solution:
     def isStraight(self, nums: List[int]) -> bool:
         ma, mi = 0, 14
@@ -65,6 +64,18 @@ class Solution:
 
 #时间复杂度：O(N)
 #空间复杂度：O(N)
+
+
+
+################方法3 排序 + 遍历 Krahets
+
+
+
+
+
+
+
+
 
 
 
