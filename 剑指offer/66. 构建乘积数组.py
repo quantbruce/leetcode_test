@@ -27,3 +27,13 @@ class Solution:
 #时间复杂度：O(N)
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/solution/liang-tang-bian-li-by-z1m/
+
+    
+    
+#################方法2 Krahets法
+
+
+
+
+
+
