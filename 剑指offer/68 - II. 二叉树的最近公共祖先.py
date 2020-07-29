@@ -13,9 +13,9 @@ class Solution:
             if not root: return False
             stack.append(root)
             if root.val == node.val: return True
-            if dfs(root.left, node, stack) or dfs(root.right, node, stack): # or是因为，没在根节点的左子树找到，还有可能在右子树找到
+            if dfs(root.left, node, stack) or dfs(root.right, node, stack): # or是因为，没在根节点的左子树找到，还有可能在右子树找到, 这个地方老写错，return....
                 return True
-            stack.pop() # 表示p,q都没在二叉树中找到的情形
+            stack.pop() # 表示p,q都没在二叉树中找到的情形, 因为这个stack的长度后面要用到
         
         dfs(root, p, stack_p)
         dfs(root, q, stack_q)
@@ -25,6 +25,8 @@ class Solution:
             i+=1
         return res # res当下的值总会覆盖之前的值，确保更新。res注意不是list
     
+#时间复杂度：O(N) ???
+#空间复杂度：O(N) ??????
   
 https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
 
@@ -38,16 +40,17 @@ https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/so
 
 class Solution:
     def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-        if not root or root==p or root==q:
+        if not root or root==p or root==q:  #这几种情况合并的代码写的漂亮
             return root
-        left = self.lowestCommonAncestor(root.left, p, q)
+        left = self.lowestCommonAncestor(root.left, p, q) # left和right返回有4种组合，空、非空etc
         right = self.lowestCommonAncestor(root.right, p, q)
 
-        if not left:
+        if not left:  #就是应对上面left和right的几种组合而设置的
             return right
         if not right:
             return left
         else:
             return root
- 
+#时间复杂度：O(N) ???????
+#空间复杂度：O(N) ???????
 https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
