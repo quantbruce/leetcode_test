@@ -1,3 +1,5 @@
+####################方法1 递归法
+
 """
 执行用时 :
 88 ms
@@ -41,9 +43,9 @@ class Solution(object):
 
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
-"""
+    
+###################方法2 迭代法
 
-"""
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
         while root:
@@ -53,10 +55,24 @@ class Solution(object):
                 root = root.left
             else:
                 return root
-
-
+            
+#时间复杂度：O(N)
+#空间复杂度：O(1)
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
+##################方法3 递归法
+
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if root.val > p.val and root.val > q.val:
+            return self.lowestCommonAncestor(root.left,p,q)
+        if root.val < p.val and root.val < q.val:
+            return self.lowestCommonAncestor(root.right,p,q)
+        return root
+    
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
 
 
