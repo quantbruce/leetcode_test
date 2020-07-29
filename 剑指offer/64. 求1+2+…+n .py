@@ -1,3 +1,12 @@
+##################方法1 面试官骂人法
+
+class Solution:
+    def sumNums(self, n: int) -> int:
+        return sum(list(range(1, n+1)))
+
+
+
+###################方法2 Krahets 逻辑运算符短路效应法
 """
 执行用时 :
 52 ms
