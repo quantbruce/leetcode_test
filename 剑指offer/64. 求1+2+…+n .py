@@ -27,6 +27,6 @@ class Solution:
         n > 1 and self.sumNums(n - 1)
         self.res += n
         return self.res
-
-
+#时间复杂度：O(N) 需要开启N次递归函数
+#空间复杂度：O(N) 递归深度
 https://leetcode-cn.com/problems/qiu-12n-lcof/solution/mian-shi-ti-64-qiu-1-2-nluo-ji-fu-duan-lu-qing-xi-/
