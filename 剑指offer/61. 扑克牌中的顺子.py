@@ -30,6 +30,44 @@ class Solution:
 
 https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/solution/bu-neng-you-kong-xi-bu-neng-you-zhong-fu-by-keyian/
 
+####对上述代码简化之后
+
+class Solution:
+    def isStraight(self, nums: List[int]) -> bool:
+        if len(nums) != 5: return False
+        nums.sort()
+        count0 = nums.count(0)
+        start = count0
+        if nums[-1] - nums[start] > 4:
+            return False
+        if len(nums[start:])!=len(set(nums[start:])):
+            return False
+        return True
+#时间复杂度：O(N*logN)  ???????
+#空间复杂度：O(1)
 
 
-#######
+
+################方法2 Krahets 线性遍历+集合法  最优
+
+
+class Solution:
+    def isStraight(self, nums: List[int]) -> bool:
+        ma, mi = 0, 14
+        repeat = set()
+        for num in nums:
+            if num==0: continue
+            ma = max(ma, num)
+            mi = min(mi, num)
+            if num in repeat: return False
+            repeat.add(num)
+        return ma-mi<5
+
+#时间复杂度：O(N)
+#空间复杂度：O(N)
+
+
+
+
+
+
