@@ -7,7 +7,7 @@ class Solution:
     def printNumbers(self, n: int) -> [int]:
         def dfs(x):
                 if x==n:
-                    s=''.join(num[self.start:])
+                    s=''.join(num[self.start:])   # n−nine = start, n-nine等于几，下标就从几开始，可以这样记
                     if s!='0': res.append(int(s))
                     if n - self.start == self.nine: self.start -= 1
                     return
