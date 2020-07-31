@@ -19,7 +19,7 @@ class Solution:
 
         num, res = ['0']*n, []
         self.nine = 0
-        self.start = n-1
+        self.start = n-1 # 为什么这里是n-1
         dfs(0)
         return res
 
