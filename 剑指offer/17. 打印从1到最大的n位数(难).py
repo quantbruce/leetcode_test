@@ -9,7 +9,7 @@ class Solution:
                 if x==n:
                     s=''.join(num[self.start:])   # n−nine = start, n-nine等于几，下标就从几开始，可以这样记
                     if s!='0': res.append(int(s))
-                    if n - self.start == self.nine: self.start -= 1
+                    if n - self.start == self.nine: self.start -= 1 # 减1就是start的下标往左移。例如。099——>100时
                     return
                 for i in range(10):
                     if i==9: self.nine += 1
