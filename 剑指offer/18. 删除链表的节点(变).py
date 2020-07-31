@@ -1,8 +1,8 @@
 ######### 方法1 Krahets
 class Solution:
     def deleteNode(self, head: ListNode, val: int) -> ListNode:
-        if head.val == val: return head.next
-        pre, cur = head, head.next
+        if head.val == val: return head.next # 考虑特例
+        pre, cur = head, head.next # head在这里分身了
         while cur and cur.val != val:
             pre, cur = cur, cur.next
         pre.next = cur.next
