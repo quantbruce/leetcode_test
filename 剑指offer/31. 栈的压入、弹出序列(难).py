@@ -21,7 +21,7 @@ class Solution:
         j = 0
         for x in pushed:
             stack.append(x)
-            while stack and j < len(popped) and stack[-1] == popped[j]:
+            while stack and j < len(popped) and stack[-1] == popped[j]: # and j<len(popped) 这个条件其实可以省略，效率更高
                 stack.pop()
                 j += 1
         return not stack
