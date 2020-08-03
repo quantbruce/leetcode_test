@@ -63,7 +63,7 @@ class Solution:
             node1, node2 = queue.pop(0), queue.pop(0) # 这样写照样是AC的，说明，queue里的元素删除后实际上是发生变化的，有更新
             if not node1 and not node2: continue
             if not node1 or not node2 or node1.val!=node2.val: return False
-            queue.extend([node1.left, node2.right, node1.right, node2.left])
+            queue.extend([node1.left, node2.right, node1.right, node2.left]) # 成对成对的比，注意这里的对子的顺序
         return True
     
     
