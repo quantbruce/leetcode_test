@@ -12,7 +12,9 @@ class Solution(object):
     
 #时间复杂度: O(N**2)
 #空间复杂度：O(N)
-
+https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/solution/mian-shi-ti-33-er-cha-sou-suo-shu-de-hou-xu-bian-6/
+    
+    
 ##########################################这种方法很费解，还没吃透。吃了一下午，后续反复肯！！！！
 ###日后细究
 class Solution:
