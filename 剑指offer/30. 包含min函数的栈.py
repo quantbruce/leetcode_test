@@ -13,7 +13,7 @@ class MinStack:
             self.B.append(x)
 
     def pop(self) -> None:
-        if self.A.pop() == self.B[-1]:
+        if self.A.pop() == self.B[-1]: # 不管这个if是否成立，self.A.pop()都会执行，只是成立的时候self.B.pop()才会同时执行，这个细节很重要！！！
             self.B.pop()
 
     def top(self) -> int:
