@@ -11,7 +11,7 @@ class Solution:
                 tmp.append(node.val)
                 if node.left: queue.append(node.left)
                 if node.right: queue.append(node.right)
-            res.append(tmp[::-1] if len(res) % 2 else tmp)
+            res.append(tmp[::-1] if len(res) % 2 else tmp) # 这个与len(res)挂钩非常巧妙
         return res
 #时间复杂度：O(N)
 #空间复杂度：O(N)
