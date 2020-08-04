@@ -29,7 +29,7 @@ class Codec:
             node = queue.pop(0)
             if node:
                 res.append(str(node.val))
-                queue.append(node.left)
+                queue.append(node.left) # 这个地方错写成 if node.left: queue.append(node.left) 这样写的话 "null"根本进入不到res中去
                 queue.append(node.right)
             else:
                 res.append('null')
