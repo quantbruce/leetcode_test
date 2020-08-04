@@ -74,9 +74,9 @@ class Solution:
                 if tmp.random and tmp.random not in visited:
                     visited[tmp.random] = Node(tmp.random.val, None, None)
                     queue.append(tmp.random)
-                visited[tmp].next = visited.get(tmp.next) #奇怪，为什么visited[tmp.next]就会报错，非空报错？
-                visited[tmp].random = visited.get(tmp.random) #同样，visited[tmp.random]也会报错，非空报错
-            return clone
+                visited[tmp].next = visited.get(tmp.next) #奇怪，为什么visited[tmp.next]就会报错，非空报错？ # dic = {'a':1, 'b':2, 'c':3}
+                visited[tmp].random = visited.get(tmp.random) #同样，visited[tmp.random]也会报错，非空报错   # print(dic['d'])
+            return clone                                                                                   # print(dic.get('b'))
         return bfs(head)
 #时间复杂度：O(N)
 #空间复杂度：O(N)
