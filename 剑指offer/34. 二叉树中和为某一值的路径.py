@@ -24,7 +24,7 @@ class Solution:
                 res.append(list(path))   #体会下为什么要加这个list()。 说，如果不这样写的话后面pop删除的是单个元素2，这样括起来后，后面pop删除的才是整条路径[5,4,11,2]
             recur(root.left, tar)
             recur(root.right, tar)
-            path.pop()  # 结合题解PPT，在脑海中在现这行代码，体会其必要性
+            path.pop()  # 结合题解PPT，在脑海中在现这行代码，体会其必要性, 也体会下为什么要放在这个位置
 
         recur(root, sum)
         return res
