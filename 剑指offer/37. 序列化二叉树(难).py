@@ -42,7 +42,7 @@ class Codec:
         :rtype: TreeNode
         """
         if data == '[]': return 
-        vals, i = data[1:-1].split(','), 1
+        vals, i = data[1:-1].split(','), 1 #因为0是根节点，所以从1开始
         root = TreeNode(int(vals[0]))
         queue = [root]
         while queue:
