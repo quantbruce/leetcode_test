@@ -57,7 +57,7 @@ class Solution:
 #空间复杂度：O(N)
     
     
-########我默写的方法3 
+########我默写的方法3 BFS 
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         visited = {}
