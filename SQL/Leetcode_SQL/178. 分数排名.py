@@ -13,3 +13,5 @@ order by s1.Score desc, s2.Id asc;
 select Score,
     dense_rank() over (order by Score desc) as `Rank`
 from Scores
+
+# https://leetcode-cn.com/problems/rank-scores/solution/tu-jie-sqlmian-shi-ti-jing-dian-pai-ming-wen-ti-by/
