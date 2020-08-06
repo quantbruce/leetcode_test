@@ -1,3 +1,6 @@
+### 解题思路:先对Employee表进行部门分组工资排名，再关联Department表查询部门名称，再使用WHERE筛选出排名小于等于3的数据（也就是每个部门排名前3的工资）。
+
+
 select B.Name as Department, A.Name as Employee, A.Salary
 from
 (select DepartmentId, Name ,Salary,
