@@ -1,6 +1,6 @@
 CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
 BEGIN
-  declare p INT;
+  declare p INT; # declare关键字？？？？
   set p = N - 1;
   RETURN (
       # Write your MySQL query statement below.
