@@ -4,7 +4,7 @@
 select B.Name as Department, A.Name as Employee, A.Salary
 from
 (select DepartmentId, Name ,Salary,
-dense_rank() over (partition by DepartmentId order by Salary desc) as ranking
+dense_rank() over (partition by DepartmentId order by Salary desc) as ranking  # 这几个列名的先后顺序总是容易写错，多练习下
 from Employee) as A
 inner join Department as B
 on A.DepartmentId = B.Id
