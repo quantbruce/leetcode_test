@@ -18,9 +18,8 @@ class MedianFinder:
             heappush(self.A, -heappop(self.B))
 
     def findMedian(self) -> float:
-        return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0]) / 2.0 #(self.A[0]-self.B[0])为什么是减号？
-
-#时间复杂度：O(logN)
+        return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0]) / 2.0 #(self.A[0]-self.B[0])为什么是减号？，实际上B最初也是小顶堆，
+#时间复杂度：O(logN)                                                                                                          但是后面强行取反(负数)， 便转化为了大顶堆
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/solution/mian-shi-ti-41-shu-ju-liu-zhong-de-zhong-wei-shu-y/
 
