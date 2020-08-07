@@ -18,7 +18,7 @@ class Solution:
         i, j = 0, len(nums) - 1
         while i <= j:
             m = (i + j) // 2
-            if nums[m] == m: i = m + 1
+            if nums[m] == m: i = m + 1 # 妙就妙在这里的target就大多是m, 也就是原来有序数组的下标
             else: j = m - 1
         return i # 容易写错成nums[i], 稍微试想下，nums[i]就是整个数组中缺少的那个数，你还想引用他，这里面压根就没有。所以自然是i
 #时间复杂度：O(logN)
