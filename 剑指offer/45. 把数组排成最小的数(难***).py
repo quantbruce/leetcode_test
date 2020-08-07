@@ -57,7 +57,41 @@ https://blog.csdn.net/LaoYuanPython/article/details/95218694  # python中的富�
 https://blog.csdn.net/besmarterbestronger/article/details/101217761  # python中的富比较方法案例
   
   
-  
+##########快速排序递归写法 Krahets方法另写 最优
+"""
+执行用时：
+52 ms
+, 在所有 Python3 提交中击败了
+58.62%
+的用户
+内存消耗：
+14 MB
+, 在所有 Python3 提交中击败了
+5.47%
+的用户
+
+"""
+class Solution:
+    def minNumber(self, nums: List[int]) -> str:
+        arr = [str(num) for num in nums]
+        def quick_sort(left, right):
+            if left >= right: return
+            low, high = left, right
+            pivot = arr[left]
+            while left < right:
+                while left < right and arr[right]+pivot >= pivot+arr[right]: right-=1
+                arr[left] = arr[right]
+                while left < right and arr[left]+pivot <= pivot+arr[left]: left+=1
+                arr[right] = arr[left]
+            arr[left] = pivot
+            quick_sort(low, left-1)
+            quick_sort(right+1, high)
+        quick_sort(0, len(nums)-1)
+        return ''.join(arr)
+    
+#时间复杂度：O(N*logN)
+#空间复杂度：O(N)
+https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/solution/shi-fen-rong-yi-li-jie-de-jie-fa-by-wojiushigaojie/
   
   
         
