@@ -22,7 +22,7 @@ https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-        if not root: return True
+        if not root: return True  # 细节，注意。空节点也当作是平衡的
         return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and \
             self.isBalanced(root.left) and self.isBalanced(root.right)
 
