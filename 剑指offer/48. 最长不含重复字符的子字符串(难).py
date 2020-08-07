@@ -37,7 +37,7 @@ class Solution:
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         n = len(s)
-        head, res = 0, 0
+        head, res = 0, 0 # 注意理解下，为什么这里的res=0?
         hashmap = {}
         for tail in range(n):
             if s[tail] in hashmap:
