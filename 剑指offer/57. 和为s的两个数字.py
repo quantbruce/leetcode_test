@@ -23,10 +23,10 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         i, j = 0, len(nums) - 1
         while i < j:
-            s = nums[i] + nums[j]
+            s = nums[i] + nums[j]  #########看起来容易，但是写法细节这里有魔鬼！！！
             if s > target: j -= 1
             elif s < target: i += 1
-            else: return nums[i], nums[j]
+            else: return [nums[i], nums[j]]
         return []
     
 #时间复杂度：O(N)
