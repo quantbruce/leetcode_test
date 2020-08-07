@@ -78,7 +78,7 @@ class Solution:
         tmp = [0] * n             # 因为相当于给nums弄了个分身的感觉
         return self.mergeSort(nums, tmp, 0, n-1)
     
-#时间复杂度: O(N*log(N))
+#时间复杂度: O(N*log(N)) 所有的元素每次要合并是O(N)，总共要合并O(logN)趟。
 #空间复杂度: O(N)
 
 https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/solution/shu-zu-zhong-de-ni-xu-dui-by-leetcode-solution/
