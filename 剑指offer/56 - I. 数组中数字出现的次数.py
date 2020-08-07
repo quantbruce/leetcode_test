@@ -52,7 +52,7 @@ class Solution:
                 del dic[num]
         return list(dic.keys())
 
-############### 方法3 位运算法
+############### 方法3 位运算法 最优
 
 class Solution:
     def singleNumbers(self, nums: List[int]) -> List[int]:
