@@ -25,6 +25,64 @@ class MedianFinder:
 https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/solution/mian-shi-ti-41-shu-ju-liu-zhong-de-zhong-wei-shu-y/
 
 
+##################方法2 最容易最直观的排序法
+class MedianFinder:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.store = []
+
+    def addNum(self, num: int) -> None:
+        self.store.append(num)
+
+    def findMedian(self) -> float:
+        self.store.sort()
+        n = len(self.store)
+        if n & 1 == 1: # n 是奇数
+            return self.store[n // 2]
+        else:
+            return (self.store[n // 2 - 1] + self.store[n // 2]) / 2
+        
+#时间复杂度：O(N*logN)
+#空间复杂度：O(N)
+# https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/solution/you-xian-dui-lie-by-z1m/
+
+
+
+####################方法3 二分插入法
+import bisect
+class MedianFinder:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """       
+        self.res = []
+
+    def addNum(self, num: int) -> None:
+        if not self.res:
+            self.res.append(num)
+        else:
+            bisect.insort_left(self.res, num)
+
+    def findMedian(self) -> float:
+        n = len(self.res)
+        self.res.sort()
+        if n & 1==1: 
+            return self.res[n//2]
+        else:
+            return (self.res[n//2-1]+self.res[n//2])/2
+
+#时间复杂度：O(n)。O(logn)+O(n)≈O(n)。 其中包括： 查找元素插入位置O(logN) （二分查找）、向数组某位置插入元素O(N) （插入位置之后的元素都需要向后移动一位）。
+#空间复杂度：O(n)。使用了数组保存输入。
+
+# https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/solution/you-xian-dui-lie-by-z1m/
+
+
+
+
 
 
 
