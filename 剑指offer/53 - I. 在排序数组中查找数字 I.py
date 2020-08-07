@@ -52,7 +52,9 @@ class Solution:
         left = j
         
         return right - left - 1 
-
+    
+#时间复杂度：O(logN)
+#空间复杂度：O(1)
 链接：https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/solution/mian-shi-ti-53-i-zai-pai-xu-shu-zu-zhong-cha-zha-5/
 
     
