@@ -18,7 +18,7 @@ class MedianFinder:
             heappush(self.A, -heappop(self.B))
 
     def findMedian(self) -> float:
-        return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0]) / 2.0
+        return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0]) / 2.0 #(self.A[0]-self.B[0])为什么是减号？
 
 #时间复杂度：O(logN)
 #空间复杂度：O(N)
