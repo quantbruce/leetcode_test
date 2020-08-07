@@ -7,7 +7,8 @@ class Solution:
             if target == nums[i]:
                 count+=1
         return count
-        
+#时间复杂度: O(N)
+#空间复杂度: O(1)
 
 
 ############二分查找
