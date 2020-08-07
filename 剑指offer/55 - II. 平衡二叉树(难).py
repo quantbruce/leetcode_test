@@ -30,7 +30,7 @@ class Solution:
         if not root: return 0
         return max(self.depth(root.left), self.depth(root.right)) + 1
 
-#时间复杂度：O(N*log(N)) 需要仔细多理解下
+#时间复杂度：O(N*log(N)) 需要仔细多理解下，每一层平均复杂度：O(N), 共需要遍历logN层
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-55-ii-ping-heng-er-cha-shu-cong-di-zhi/
 
