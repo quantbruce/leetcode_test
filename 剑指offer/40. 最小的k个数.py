@@ -5,7 +5,7 @@ class Solution:
         for a in arr:
             nums[a]+=1
         output=[]
-        i = 0
+        i = 0 # i要从0开始
         while len(output)<k: # 这个地方默写len(output)错了
             if nums[i]>0:
                 for _ in range(nums[i]):
