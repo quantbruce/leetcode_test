@@ -9,10 +9,10 @@ class Solution:
             right = recur(root.right)
             if right == -1: return -1
             return max(left, right)+1 if abs(left-right)<=1 else -1
-        
         return recur(root)!=-1
-#时间复杂度：O(N)
-#空间复杂度：O(N)
+    
+#时间复杂度：O(N) N 为树的节点数；最差情况下，需要递归遍历树的所有节点。
+#空间复杂度：O(N) 最差情况下（树退化为链表时），系统递归需要使用O(N)的栈空间
 https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-55-ii-ping-heng-er-cha-shu-cong-di-zhi/
 
 
