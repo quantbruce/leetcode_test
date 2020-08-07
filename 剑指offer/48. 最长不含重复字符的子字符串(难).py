@@ -41,7 +41,7 @@ class Solution:
         hashmap = {}
         for tail in range(n):
             if s[tail] in hashmap:
-                head = max(hashmap[s[tail]], head) 
+                head = max(hashmap[s[tail]], head) # 如果写成 head = hashmap[s[tail]], 对于"abba"会输出3，正确答案是2
             hashmap[s[tail]] = tail + 1 # 不管在不在, tail下标都要向后移一位, 这样代码好好体会
             res = max(tail-head+1, res)
         return res
