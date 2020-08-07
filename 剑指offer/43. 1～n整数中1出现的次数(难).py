@@ -9,10 +9,10 @@ class Solution:
         high, cur, low = n // 10, n % 10,  0
         while high != 0 or cur != 0:  # 这个连接条件是or, 容易写错成and
             if cur == 0: res += digit*high
-            elif cur == 1: res += digit*high + low + 1
+            elif cur == 1: res += digit*high + low + 1 #这几项res结果都带 += 累加效应
             else: res += (high + 1) * digit
-            low += cur * digit
-            cur = high % 10
+            low += cur * digit  
+            cur = high % 10   # cur与high的顺序要记住谁先更新，默写错过
             high //= 10
             digit *= 10
         return res
