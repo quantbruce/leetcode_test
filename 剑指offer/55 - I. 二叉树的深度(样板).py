@@ -18,8 +18,12 @@ class Solution:
                 if node.left: tmp.append(node.left)
                 if node.right: tmp.append(node.right)
             queue = tmp  # 这行代码放不放在for循环内部都是对的，但是放在外面效率高一些
-            res += 1
+            res += 1    # queue = tmp这种写法有些反常规(直接覆盖了)，以往常见的写法都是qeuue.append(), 注意区分下
         return res
+    
 #时间复杂度：O(N)
 #空间复杂度：O(N) 最差情况下（当树平衡时），队列 queue 同时存储 N/2个节点。 ？？？？？？？？？？？？？？
 链接：https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/solution/mian-shi-ti-55-i-er-cha-shu-de-shen-du-xian-xu-bia/
+
+    
+    
