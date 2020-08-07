@@ -32,11 +32,11 @@ class Solution:
         return right - left - 1
 
     
- ###########更展开详细的写法
+###########更展开详细的写法
 class Solution:
     def search(self, nums: [int], target: int) -> int:
         i, j = 0, len(nums) - 1
-        while i <= j:
+        while i <= j: # 细节，写错过，要记得i<=j，此处是有等号的，我们要的就是要i，j分别突出去那个区间
             m = (i + j) // 2
             if nums[m] < target: i = m + 1
             elif nums[m] == target: i = m + 1 # 向右缩，因此是在找右边界
