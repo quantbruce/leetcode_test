@@ -50,7 +50,7 @@ class Solution:
     def mergeSort(self, nums, tmp, l, r):
         if l>=r: return 0
         mid = (l+r)//2
-        inv_count = self.mergeSort(nums, tmp, l, mid) + self.mergeSort(nums, tmp, mid+1, r)
+        inv_count = self.mergeSort(nums, tmp, l, mid) + self.mergeSort(nums, tmp, mid+1, r) # inv_count的初值在这里已经默认递归到最底层时，设置为了inv_count=0
         i, j, pos = l, mid+1, l # l和mid+1分别是左右两个子数组的start下标
         while i<=mid and j<=r:
             if nums[i]<=nums[j]:               
