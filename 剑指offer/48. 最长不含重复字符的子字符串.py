@@ -27,6 +27,7 @@ class Solution:
                 while s[tail] in s[head:tail]:  # 因为窗口中相等的元素若不在左端点，则需要移动多次，所以需要while循环
                     head += 1
         return res
+    
 #时间复杂度：O(N**2)  尝试用abcd...z这样的例子来理解
 #空间复杂度：O(1)
     
@@ -44,10 +45,12 @@ class Solution:
             hashmap[s[tail]] = tail + 1 # 不管在不在, tail下标都要向后移一位, 这样代码好好体会
             res = max(tail-head+1, res)
         return res
-3时间复杂度：O(N)
+
+#时间复杂度：O(N)
 #空间复杂度：O(N)
-
-
+https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/solution/tu-jie-hua-dong-chuang-kou-shuang-zhi-zhen-shi-xia/
+    
+    
 ###################方法3 Krahets法
 
 
