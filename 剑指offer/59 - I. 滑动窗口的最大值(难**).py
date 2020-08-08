@@ -23,7 +23,8 @@ class Solution:
 #时间复杂度：？？？？？？
 #空间复杂度：O(K)
 
-    
+#############方法2 维持一个单调递减的序列
+
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         deque=[]
