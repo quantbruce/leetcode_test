@@ -43,6 +43,6 @@ class Solution:
                     tmp[x+y] += pre[x]/6
             pre = tmp
         return pre
-#时间复杂度：O(N**2) ??
-#空间复杂度：O(N**2) ??
+#时间复杂度：O(N**2) 我自己的判断，O(N*(5N+1)*6)
+#空间复杂度：O(N**2)  我自己的判断 一颗骰子O(5*N+1)， 推到N颗，所以应该是O(5*N+1)*O(N)
 https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/solution/java-dong-tai-gui-hua-by-zhi-xiong/
