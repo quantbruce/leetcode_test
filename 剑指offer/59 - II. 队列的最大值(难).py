@@ -49,7 +49,7 @@ class MaxQueue:
 
     def __init__(self):
         self.queue = []
-        self.max_stack = []
+        self.max_stack = []  # 本质也是在维护一个单调递减的栈
 
     def max_value(self) -> int:
         return self.max_stack[0] if self.max_stack else -1
