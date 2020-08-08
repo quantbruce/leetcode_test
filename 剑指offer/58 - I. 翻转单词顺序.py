@@ -41,7 +41,7 @@ class Solution:
 
     
     
-##############方法2 双指针法 Krahets
+##############方法2 双指针法 Krahets (该法更加偏底层，没有split()函数)
 ###PPT脑壳放动画
 class Solution:
     def reverseWords(self, s: str) -> str:
