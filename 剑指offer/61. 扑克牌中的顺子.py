@@ -62,8 +62,8 @@ class Solution:
             repeat.add(num)
         return ma-mi<5
 
-#时间复杂度：O(N)
-#空间复杂度：O(N)
+#时间复杂度：O(N) 实际上这都是O(1)
+#空间复杂度：O(N) 实际上这都是O(1)
 https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/solution/mian-shi-ti-61-bu-ke-pai-zhong-de-shun-zi-ji-he-se/
 
 
