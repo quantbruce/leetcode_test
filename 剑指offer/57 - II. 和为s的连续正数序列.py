@@ -16,6 +16,7 @@ class Solution:
 
     
 #############################双指针算法(同向移动的双指针)
+###不难，多注意下边界问题即可
 class Solution:
     def findContinuousSequence(self, target: int) -> List[List[int]]:
         i,j = 0,1
