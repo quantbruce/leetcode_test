@@ -43,11 +43,29 @@ class MaxQueue:
         return ans
     
 #都是O(1)
-https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/solution/ru-he-jie-jue-o1-fu-za-du-de-api-she-ji-ti-by-z1m/
 
-    
-    
-    
-    
-    
+#############两个list的变体版本
+class MaxQueue:
+
+    def __init__(self):
+        self.queue = []
+        self.max_stack = []
+
+    def max_value(self) -> int:
+        return self.max_stack[0] if self.max_stack else -1
+
+    def push_back(self, value: int) -> None:
+        self.queue.append(value)
+        while self.max_stack and self.max_stack[-1] < value:
+            self.max_stack.pop()
+        self.max_stack.append(value)
+
+    def pop_front(self) -> int:
+        if not self.queue: return -1
+        ans = self.queue.pop(0)
+        if self.max_stack[0] == ans:
+            self.max_stack.pop(0)
+        return ans
+
+https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/solution/ru-he-jie-jue-o1-fu-za-du-de-api-she-ji-ti-by-z1m/
     
