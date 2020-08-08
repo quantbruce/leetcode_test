@@ -20,6 +20,8 @@ class Solution:
             res.append(max(nums[i:i+k]))
         return res
 
+#时间复杂度：？？？？？？
+#空间复杂度：O(K)
 
     
 class Solution:
