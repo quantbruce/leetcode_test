@@ -20,7 +20,7 @@ class Solution:
         for i in range(1, len(prices)):
             dp[i] = max(dp[i-1], prices[i]-min(prices[:i]))
         return dp[-1]
-#时间复杂度：？？？？？？？
+#时间复杂度：我觉得是O(N**2)？？？？？？？
 #空间复杂度: O(N)
 
 https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/solution/mian-shi-ti-63-gu-piao-de-zui-da-li-run-dong-tai-2/
