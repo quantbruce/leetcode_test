@@ -21,7 +21,7 @@ class Solution:
         if not str: return 0 # 字符串为空则直接返回
         res, i, sign, max_int = 0, 1, 1, 2 ** 31 - 1
         if str[0] == '-': sign = -1 # 保存负号
-        elif str[0] != '+': i = 0 # 若无符号位，则需从 i = 0 开始数字拼接
+        elif str[0] != '+': i = 0 # 若无符号位，则需从 i = 0 开始数字拼接, elif换成if就会错
         for c in str[i:]:
             if not '0' <= c <= '9' : break # 遇到非数字的字符则跳出
             res = 10 * res + ord(c) - ord('0') # 数字拼接, c不用加引号，0要加！
