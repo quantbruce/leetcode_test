@@ -44,7 +44,7 @@ class Solution(object):
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
     
-###################方法2 迭代法
+###################方法2 迭代法  Krahets
 
 class Solution(object):
     def lowestCommonAncestor(self, root, p, q):
@@ -60,7 +60,7 @@ class Solution(object):
 #空间复杂度：O(1)
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
-##################方法3 递归法
+##################方法3 递归法 Krahets
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
