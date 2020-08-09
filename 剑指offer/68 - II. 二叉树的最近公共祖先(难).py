@@ -31,6 +31,7 @@ class Solution:
 https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
 
 ######################感觉方法2 更好
+#####比较费解，关于left以及right
 
 class Solution:
     def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
@@ -45,6 +46,7 @@ class Solution:
             return left
         else:
             return root
+        
 #时间复杂度：O(N) ???????
 #空间复杂度：O(N) ???????
 https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-bu-tong-si-kao-fang-shi-ying-he-mian-/
