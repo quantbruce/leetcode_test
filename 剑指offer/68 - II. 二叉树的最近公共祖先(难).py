@@ -35,7 +35,7 @@ https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/so
 
 class Solution:
     def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-        if not root or root==p or root==q:  #这几种情况合并的代码写的漂亮
+        if not root or root==p or root==q:  #这几种情况合并的代码写的漂亮, 只有满足这行代码的root(其实也就是p,q), 才会被返回并记录left,和right节点值。
             return root
         left = self.lowestCommonAncestor(root.left, p, q) # left和right返回有4种组合，空、非空etc
         right = self.lowestCommonAncestor(root.right, p, q)
