@@ -43,8 +43,10 @@ class Solution:
                 ans += 1
                 left -= 1
                 right += 1
-        return ans 
-        
+        return ans
+    
+#时间复杂度：O(N**2)
+#空间复杂度：O(1)
         
         ## (1)是python解的，(2)的原理讲的非常好，尤其是中心点center个数为什么等于2*N-1
         (1) https://leetcode-cn.com/problems/palindromic-substrings/solution/hui-wen-zi-chuan-by-leetcode/
