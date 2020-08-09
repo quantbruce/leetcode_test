@@ -39,7 +39,7 @@ class Solution:
         for center in range(2*length-1): # 定理：长度为length的字符串s，中心点个数为2*len(s)-1
             left = center // 2   # left,right其实只是两个下标而已
             right = left + center % 2 
-            while left>=0 and right<length and s[left] == s[right]: # 只有满足s[left]==s[right] 才能够拓展
+            while left>=0 and right<length and s[left] == s[right]: # 只有满足s[left]==s[right] 才能够拓展, 这里可以多次拓展，注意了。经常错写成if
                 ans += 1
                 left -= 1
                 right += 1
