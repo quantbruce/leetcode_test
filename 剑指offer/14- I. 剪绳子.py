@@ -3,7 +3,7 @@ class Solution:
         if n <= 3: return n - 1
         a, b = n // 3, n % 3
         if b == 0: return int(math.pow(3, a))
-        if b == 1: return int(math.pow(3, a - 1) * 4)
+        if b == 1: return int(math.pow(3, a - 1) * 4) # 这里写错过，改成了elif就报错
         return int(math.pow(3, a) * 2)
     
 #时间复杂度：O(1)
