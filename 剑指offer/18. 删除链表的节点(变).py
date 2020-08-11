@@ -4,8 +4,8 @@ class Solution:
         if head.val == val: return head.next # 考虑特例
         pre, cur = head, head.next # head在这里分身了
         while cur and cur.val != val:
-            pre, cur = cur, cur.next
-        pre.next = cur.next
+            pre, cur = cur, cur.next  # pre, cur = pre.next, cur.next 这行代码也可以这样写
+        pre.next = cur.next 
         return head
     
 #时间复杂度：O(N)
