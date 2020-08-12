@@ -4,7 +4,7 @@ class Solution:
         t, r, b, l, res = 0, len(matrix[0])-1, len(matrix)-1, 0, []
         while True:
             for i in range(l, r+1): res.append(matrix[t][i])
-            t += 1
+            t += 1    # 注意顺序，是要先加下标，再进行判断是否边界相交，这里顺序我复写错过
             if t>b: break              # t>b错写成t<b,记住t的初始下标是0，越往下下标越大
             for i in range(t, b+1): res.append(matrix[i][r])
             r -= 1
