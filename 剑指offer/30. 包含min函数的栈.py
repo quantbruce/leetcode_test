@@ -9,7 +9,7 @@ class MinStack:
 
     def push(self, x: int) -> None:
         self.A.append(x)
-        if not self.B or x<=self.B[-1]: # not self.B是第一次，x <= self.B[-1] 是后面那几次
+        if not self.B or x<=self.B[-1]: # not self.B是第一次，x <= self.B[-1] 是后面那几次. 这里经常漏写了=号这种情况。记住了！！
             self.B.append(x)
 
     def pop(self) -> None:
