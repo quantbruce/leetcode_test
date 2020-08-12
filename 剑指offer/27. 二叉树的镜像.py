@@ -22,13 +22,14 @@ class Solution:
     def mirrorTree(self, root: TreeNode) -> TreeNode:
         if not root: return 
         tmp = root.left
-        root.left = self.mirrorTree(root.right)
+        root.left = self.mirrorTree(root.right) # 这一行和下面一行顺序可以交换的，不会影响答案
         root.right = self.mirrorTree(tmp)
         return root
 #时间复杂度：O(N)        
 #空间复杂度：O(N)
 https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/solution/mian-shi-ti-27-er-cha-shu-de-jing-xiang-di-gui-fu-/
 
+    
 ##############方法3 Krahets 迭代法 (用栈)
 class Solution:
     def mirrorTree(self, root: TreeNode) -> TreeNode:
