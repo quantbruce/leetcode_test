@@ -16,7 +16,7 @@ class Solution:
                 return visited[head]
             # 创建新结点
             copy = Node(head.val, None, None)
-            visited[head] = copy    # 这一行这种映射关系总容易弄错
+            visited[head] = copy    # 这一行这种映射关系总容易弄错, 漏写
             copy.next = dfs(head.next)
             copy.random = dfs(head.random)
             return copy
@@ -36,7 +36,7 @@ class Solution:
             clone = Node(head.val, None, None) # 创建新结点
             queue = collections.deque()
             queue.append(head)
-            visited[head] = clone
+            visited[head] = clone # 这一行这种映射关系总容易弄错, 漏写
             while queue:
                 tmp = queue.pop()
                 if tmp.next and tmp.next not in visited:
