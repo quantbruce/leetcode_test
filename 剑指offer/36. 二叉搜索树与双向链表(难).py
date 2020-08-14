@@ -22,7 +22,7 @@ class Solution:
             dfs(cur.right) # 递归右子树
         
         if not root: return
-        head = self.pre = ListNode(0) # 伪头节点
+        head = self.pre = ListNode(0) # 伪头节点  #这一点违反了题干要求，创建了新结点
         dfs(root)
         head = head.right
         head.left, self.pre.right = self.pre, head
@@ -69,5 +69,3 @@ class Solution:
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/solution/mian-shi-ti-36-er-cha-sou-suo-shu-yu-shuang-xian-5/
 #时间复杂度：O(N)
 #空间复杂度：O(N)
-    
-    
