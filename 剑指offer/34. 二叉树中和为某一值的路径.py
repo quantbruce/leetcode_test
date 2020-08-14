@@ -13,6 +13,10 @@
 的用户
 """
 
+### 注意点：值得注意的是，记录路径时若直接执行 res.append(path) ，则是将 path 对象加入了 res ；后续 path 改变时， res 中的 path 对象也会随之改变。
+### 正确做法：res.append(list(path)) ，相当于复制了一个 path 并加入到 res 。
+
+
 class Solution:
     def pathSum(self, root: TreeNode, sum: int) -> List[List[int]]:
         res, path = [], []
@@ -26,7 +30,7 @@ class Solution:
             recur(root.right, tar)
             path.pop()  # 结合题解PPT，在脑海中在现这行代码，体会其必要性, 也体会下为什么要放在这个位置
 
-        recur(root, sum)
+        recur(root, sum)  
         return res
     
 #时间复杂度：O(N)
