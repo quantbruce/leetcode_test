@@ -24,7 +24,7 @@ class Solution:
         if not root: return
         head = self.pre = ListNode(0) # 伪头节点  #这一点违反了题干要求，创建了新结点
         dfs(root)
-        head = head.right
+        head = head.right 
         head.left, self.pre.right = self.pre, head
         return head
     
@@ -61,7 +61,7 @@ class Solution:
             dfs(cur.right)
         
         if not root: return
-        self.pre = None 
+        self.pre = None  # 本解法中， pre 相对于递归函数是全局变量，因此需要加 self~
         dfs(root)
         self.head.left, self.pre.right = self.pre, self.head
         return self.head
