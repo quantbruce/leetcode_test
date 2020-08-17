@@ -27,7 +27,7 @@ class Solution:
         return int(str(num)[(n-1)%digit])  ####将 num转化为字符串使用O(logn)时间？？？为什么是这样？
     
 #时间复杂度：O(logN)
-#空间复杂度：O(logN)???????????
+#空间复杂度：O(logN) 想象数字num=1000, 按道理要O(1000)，要存1000个数。 但是通过str(num)--->'1000'--->相遇于只要存三个数字字符['1', '0', '0', '0']
 https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/solution/mian-shi-ti-44-shu-zi-xu-lie-zhong-mou-yi-wei-de-6/
 
 
