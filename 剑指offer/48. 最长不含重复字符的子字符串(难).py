@@ -37,7 +37,7 @@ class Solution:
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         n = len(s)
-        head, res = 0, 0 # 注意理解下，为什么这里的res=0?
+        head, res = 0, 0 # 注意理解下，为什么这里的res=0? 因为上一种写法。if len(s)<2: return len(s) 一开始就排除了输入为空字符串的情形，但这里的代码没有排除。所以res=0
         hashmap = {}
         for tail in range(n):
             if s[tail] in hashmap:
