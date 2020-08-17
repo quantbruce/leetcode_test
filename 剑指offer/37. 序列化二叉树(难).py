@@ -28,7 +28,7 @@ class Codec:
         while queue:
             node = queue.pop(0)
             if node:
-                res.append(str(node.val))
+                res.append(str(node.val)) # 这里容易漏加str()
                 queue.append(node.left) # 这个地方错写成 if node.left: queue.append(node.left) 这样写的话 "null"根本进入不到res中去. 再次犯错！！
                 queue.append(node.right)
             else:
@@ -48,11 +48,11 @@ class Codec:
         while queue:
             node = queue.pop(0)
             if vals[i]!='null':
-                node.left = TreeNode(int(vals[i]))
+                node.left = TreeNode(int(vals[i])) # 这里容易漏加int()
                 queue.append(node.left)
             i+=1
             if vals[i]!='null':
-                node.right = TreeNode(int(vals[i]))
+                node.right = TreeNode(int(vals[i])) # 这里容易漏加int()
                 queue.append(node.right)
             i+=1
         return root
