@@ -20,7 +20,7 @@ class Solution:
             if x == len(c) - 1:
                 res.append(''.join(c)) # 添加排列方案
                 return
-            dic = set()
+            dic = set() # 对应是第x位的字典集合
             for i in range(x, len(c)):
                 if c[i] in dic: continue # 重复，因此剪枝
                 dic.add(c[i])
