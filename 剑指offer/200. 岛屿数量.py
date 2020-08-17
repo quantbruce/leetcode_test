@@ -103,7 +103,7 @@ class Solution:
             queue = [[i,j]]            
             while queue:
                 [i,j] = queue.pop(0)
-                if 0<=i<len(grid) and 0<=j<len(grid[0]) and grid[i][j]=='1':
+                if 0<=i<len(grid) and 0<=j<len(grid[0]) and grid[i][j]=='1': # and的条件错写成or!!!
                     grid[i][j] = '0'
                     queue += [[i+1,j], [i-1,j], [i,j+1], [i,j-1]]
         count = 0
@@ -114,6 +114,6 @@ class Solution:
                 count += 1
         return count
     
-#时间复杂度:
-#空间复杂度:
+#时间复杂度:??
+#空间复杂度:??
 https://leetcode-cn.com/problems/number-of-islands/solution/number-of-islands-shen-du-you-xian-bian-li-dfs-or-/
