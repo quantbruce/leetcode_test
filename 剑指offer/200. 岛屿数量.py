@@ -90,7 +90,8 @@ class Solution:
                     dfs(grid, i, j) # 这行在上
                     count+=1        # 这行在下
         return count
-
+#时间复杂度：??
+#空间复杂度：??
 https://leetcode-cn.com/problems/number-of-islands/solution/number-of-islands-shen-du-you-xian-bian-li-dfs-or-/      
         
         
@@ -113,14 +114,10 @@ class Solution:
                 count += 1
         return count
     
+#时间复杂度:
+#空间复杂度:
 https://leetcode-cn.com/problems/number-of-islands/solution/number-of-islands-shen-du-you-xian-bian-li-dfs-or-/
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
