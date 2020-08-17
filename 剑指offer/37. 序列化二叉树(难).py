@@ -60,7 +60,7 @@ class Codec:
 #时间复杂度：O(N)
 #空间复杂度: O(N) ??？
 时间复杂度 O(N)： N为二叉树的节点数，按层构建二叉树需要遍历整个vals ，其长度最大为2N+1 。
-空间复杂度 O(N)： 最差情况下，队列 queuequeue 同时存储2N+1/2, 因此使用 O(N)额外空间。??????????
+空间复杂度 O(N)： 最差情况下，队列 queue 同时存储2N+1/2, 因此使用 O(N)额外空间。??????????
 
 https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/solution/mian-shi-ti-37-xu-lie-hua-er-cha-shu-ceng-xu-bian-/
 
