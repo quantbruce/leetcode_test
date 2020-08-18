@@ -14,8 +14,8 @@ class Solution:
         queue, res = [root], 0  ### queue=[], queue.append(root) 也可以写成这样。
         while queue:
             tmp = []
-            for node in queue:      # 这行代码写漏了，后面要加强记忆. 这里倒出来的方式是采用遍历。不是通常的.pop()
-                if node.left: tmp.append(node.left)
+            for node in queue: #这行代码写漏了，后面要加强记忆. 这里倒出来的方式是采用遍历。不是通常的.pop() //常规写法node=queue.pop(0), 会出现queue中同时存在交接行的元素
+                if node.left: tmp.append(node.left)                                                    #//queue=tmp这样写就可以确保queue中的同时存在的元素都是同一层的
                 if node.right: tmp.append(node.right)
             queue = tmp  # 这行代码放不放在for循环内部都是对的，但是放在外面效率高一些
             res += 1    # queue = tmp这种写法有些反常规(直接覆盖了)，以往常见的写法都是qeuue.append(), 注意区分下
