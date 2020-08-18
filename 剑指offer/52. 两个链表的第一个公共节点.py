@@ -7,7 +7,7 @@
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         node1, node2 = headA, headB
-        while node1!=node2:
+        while node1!=node2:   # 循环终止条件，写漏了
             if node1:
                 node1 = node1.next
             else:
