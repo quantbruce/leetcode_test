@@ -19,7 +19,7 @@ class Solution:
 ###不难，多注意下边界问题即可
 class Solution:
     def findContinuousSequence(self, target: int) -> List[List[int]]:
-        i,j = 0,1
+        i,j = 0,1 # 因为至少要含两个数
         res = []
         mid = target//2 + 2  #是点睛之笔，可以确保在i和j分别在[0, mid-1], [0, mid]范围内遍历出答案，减少了后半部分区间(任意两个数相加都必然>target)的多余遍历。提高效率
         nums = list(range(1, mid))
