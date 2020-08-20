@@ -17,7 +17,7 @@
 
 class Solution:
     def strToInt(self, str: str) -> int:
-        str = str.strip() # 删除首尾空格  # 空间复杂度 O(N)
+        str = str.strip() # 删除首尾空格建立新的字符串  # 空间复杂度 O(N)
         if not str: return 0 # 字符串为空则直接返回
         res, i, sign, max_int = 0, 1, 1, 2 ** 31 - 1
         if str[0] == '-': sign = -1 # 保存负号
