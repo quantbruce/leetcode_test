@@ -15,7 +15,7 @@
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        res, stack = [], []
+        res = []
         stack = s.strip().split(" ")
         for i in range(len(stack)-1, -1, -1):
             if stack[i] == '':
