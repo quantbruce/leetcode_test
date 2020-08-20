@@ -15,7 +15,7 @@ class Solution:
             if root.val == node.val: return True
             if dfs(root.left, node, stack) or dfs(root.right, node, stack): # or是因为，没在根节点的左子树找到，还有可能在右子树找到, 这个地方老写错，return....
                 return True
-            stack.pop() # 表示p,q都没在二叉树中找到的情形, 因为这个stack的长度后面要用到
+            stack.pop() # 表示p,q都没在二叉树中找到的情形,(找到了p,q后就不需要pop了) 因为这个stack的长度后面要用到
         
         dfs(root, p, stack_p)
         dfs(root, q, stack_q)
