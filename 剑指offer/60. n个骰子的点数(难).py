@@ -36,7 +36,7 @@ print(g(4))
 class Solution:
     def twoSum(self, n: int) -> List[float]:
         pre = [1/6, 1/6, 1/6, 1/6, 1/6, 1/6]
-        for i in range(2, n+1):
+        for i in range(2, n+1):    # 这行代码漏写了
             tmp = [0]*(5*i+1)
             for x in range(len(pre)):
                 for y in range(6):
