@@ -43,7 +43,7 @@ class Solution:
                 result.append(nums[deque[0]]) #在整个过程中，始终保持deque[0]为最大值的index
         return result
     
-# 时间复杂度O(n)： 其中n为数组nums长度；线性遍历nums占用O(N)；每个元素最多仅入队和出队一次，因此单调队列deque占用O(2N) 。
+# 时间复杂度O(N)： 其中n为数组nums长度；线性遍历nums占用O(N)；每个元素最多仅入队和出队一次，因此单调队列deque占用O(2N) 。
 # 空间复杂度O(k)： 双端队列deque中最多同时存储k个元素（即窗口大小）。
 
 
