@@ -58,6 +58,20 @@ class Solution(object):
             
 #时间复杂度：O(N)
 #空间复杂度：O(1)
+
+##################对方法2 进一步提升效率
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if p.val < q.val: 
+            p, q = q, p
+        while root:
+            if root.val > p.val:
+                root = root.left
+            elif root.val < q.val:
+                root = root.right
+            else:
+                return root
+            
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/pythonti-jie-jian-dan-yi-dong-dfs-by-xiao-xue-66-2/
 
 ##################方法3 递归法 Krahets
