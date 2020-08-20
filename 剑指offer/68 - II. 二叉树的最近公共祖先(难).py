@@ -10,7 +10,7 @@ class Solution:
         stack_p = []  # 用来储存从上往下遍历找到p的轨迹
         stack_q = []  # 同理q
         def dfs(root, node, stack):  # 这个函数递归寻找子树用的很巧妙，反复多体会！
-            if not root: return False
+            if not root: return False # True就是代表目标在这条路径了  不需要找别的路径了， False反之
             stack.append(root)
             if root.val == node.val: return True
             if dfs(root.left, node, stack) or dfs(root.right, node, stack): # or是因为，没在根节点的左子树找到，还有可能在右子树找到, 这个地方老写错，return....
