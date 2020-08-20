@@ -38,7 +38,7 @@ class Solution:
             #如果相聚超过窗口长度k，丢弃掉deque中首位index
             while i-deque[0]>k-1:  # 这个while 可以改成if, 因为上面的deque.append(i)每一轮只加了一个进去
                 deque.pop(0)
-            # 只要满足一个窗口的长度k，就向result中添加nums[deque[0]一个结果
+            # 只要满足一个窗口的长度k，就向result中添加nums[deque[0]]一个结果
             if i>=k-1:
                 result.append(nums[deque[0]]) #在整个过程中，始终保持deque[0]为最大值的index
         return result
