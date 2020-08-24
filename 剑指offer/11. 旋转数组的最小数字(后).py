@@ -12,3 +12,8 @@ class Solution:
 #空间复杂度：O(1)
 https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/
 
+# 关于上述的几个if条件
+# 例子[3, 4, 5, 6, 1, 2] 可解释 i = m + 1
+# 例子[4, 1, 2 ,3] 可解释 j = m
+
+
