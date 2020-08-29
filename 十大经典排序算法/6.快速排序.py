@@ -36,7 +36,7 @@ def QuickSort(nums):
 
 def Qsort(nums, low, high):
     if low < high:         # 这个地方老写错，注意是if而不是while
-        pivot = Partition(nums, low, high)
+        pivot = Partition(nums, low, high) # pivot是每一轮最后low和high重合的下标，这个是最后才能知道的。Partition的目标就在于获得它。
         Qsort(nums, low, pivot - 1)
         Qsort(nums, pivot + 1, high)
     return nums
