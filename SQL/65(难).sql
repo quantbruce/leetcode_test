@@ -11,3 +11,12 @@ order by l.name, g1.score desc, g1.id
 
 
 
+###使用了窗口函数 dense_rank()
+
+select g.id, l.name, g.score
+from (select *, 
+      dense_rank() over(partition by language_id order by score desc) as rank 
+      from grade) g, 
+      language l
+where g.language_id = l.id and g.rank <= 2
+order by l.name asc, g.score desc, g.id asc
