@@ -22,7 +22,7 @@ t = 'jordan'
 
 print(Brute_Force(s, t))
 
-#时间复杂度：O((n-m)*m + m) 其中m是模式长度，n是主串长度
+#时间复杂度：O((n-m)*m + m) 其中m是模式长度，n是主串长度. 当m<<n时候，O(n*m)
 #空间复杂度：O(1)
 
 
