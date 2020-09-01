@@ -1,4 +1,4 @@
-select
+select                                                  -- 这里from单独统计了总个数
 round(count (user_id)*1.0/(select count(distinct user_id) from login),3) as p
 from login
 where (user_id, date)
