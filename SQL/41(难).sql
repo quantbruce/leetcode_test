@@ -1,6 +1,6 @@
 create trigger audit_log after insert on employees_test
 begin
-    insert into audit(emp_no, NAME) values(NEW.id, NEW.NAME);
+    insert into audit(emp_no, NAME) values(NEW.id, NEW.NAME);  -- 注意顺序，是右边的括号插入左边括号对应项
 end
 
 
