@@ -1,4 +1,3 @@
-
 def InsertionSort(nums):
     for i in range(len(nums)):
         preIndex = i - 1
@@ -11,3 +10,5 @@ def InsertionSort(nums):
 
 nums = [6, 10, 43, 32, 23, 14]
 print(InsertionSort(nums))
+
+
