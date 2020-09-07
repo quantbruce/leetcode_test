@@ -6,7 +6,7 @@ def countingSort(nums):
         if not bucket[nums[i]]:
             bucket[nums[i]] = 0
         bucket[nums[i]] += 1
-    for j in range(bucketLen):
+    for j in range(bucketLen): # 因为bucketLen在这里作为区间右端点(上限), 娶不到, 所以上面要加1
         while bucket[j] > 0:
             nums[sort_idx] = j
             sort_idx += 1
