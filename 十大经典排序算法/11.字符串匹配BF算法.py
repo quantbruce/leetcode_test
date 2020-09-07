@@ -26,4 +26,28 @@ print(Brute_Force(s, t))
 #空间复杂度：O(1)
 
 
+#### 写成这样是等价的
+def Brute_Force(s, t):
+    i, j = 0, 0
+    while i < len(s) and j < len(t):
+        if s[i] == t[j]:
+            i += 1
+            j += 1
+        else:
+            i = i - j + 1
+            j = 0
 
+    if j >= len(t):
+        return i - len(t)
+    else:
+        return 0
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
