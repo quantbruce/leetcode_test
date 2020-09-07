@@ -3,8 +3,8 @@ def countingSort(nums):
     bucket = [0] * bucketLen
     sort_idx = 0
     for i in range(len(nums)):
-        if not bucket[nums[i]]:
-            bucket[nums[i]] = 0
+       # if not bucket[nums[i]]:  这两行代码是冗余的，可以不要
+        #    bucket[nums[i]] = 0
         bucket[nums[i]] += 1
     for j in range(bucketLen): # 因为bucketLen在这里作为区间右端点(上限), 娶不到, 所以上面要加1
         while bucket[j] > 0:
