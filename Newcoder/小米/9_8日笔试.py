@@ -10,7 +10,6 @@ for i in range(len(B)):
     B[i] = (input().strip().split(' '))[:n]
 
 def Matrix_Multiply(A, B):
-    global res
     res = [[0]*len(B[0]) for _ in range(m)] # 这种写法，要记住了！不许模棱两可！
     for i in range(0, len(A)):
         for j in range(0, len(B[0])):
