@@ -7,7 +7,7 @@ def KMP(s, p):
             i += 1
             j += 1
         else:
-            j = nex[j]
+            j = nex[j] # 不用管nex[]里面是i还是j，反正都是下标，都是个数而已。nex[]里面指到哪个数，小蝌蚪找妈妈就找到哪个数。
 
     if j >= len(p): # j走到了末尾，说明匹配到了
         return i - len(p)
