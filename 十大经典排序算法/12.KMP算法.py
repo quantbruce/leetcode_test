@@ -23,7 +23,7 @@ def getNext(p):
         if j == -1 or p[j] == p[i]:  # i相当于右指针, j相当于左指针,i>j
             i += 1
             j += 1
-            next[i] = j  # j的下一个就是i,因为最开始设j=-1, i=0. i是要比j大1的
+            next[i] = j  # j的下一个就是i,因为最开始设j=-1, i=0. i是要比j大1的  // 这样理解这行代码：在p中，下标为i的元素下一轮开始(next[])比较的下标就是j, (从j开始)
         else:
             j = next[j]  # next = [-1, 0, 0, 0......0, 0], 被赋值的next[j]都是0
     return next
