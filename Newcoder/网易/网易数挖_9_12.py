@@ -11,7 +11,7 @@
 m, n = list(map(int, input().strip().split(' ')))
 lines1, lines2, lines3 = [], [], []
 for _ in range(n):
-    s = input()
+    s = input() # 你是循环 s次输入， 所以s要放在这个循环里面。滴滴笔试在这个细节卡死了。再也不要放这个错了！！！！！！MLGB
     if s != '':
         first, second, third = list(map(str, s.strip().split(' ')))
         lines1.append(first)
