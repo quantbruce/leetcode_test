@@ -49,6 +49,10 @@ class Solution:
         for k, val in enumerate(nums):
             if d[val]!=1:
                 return val
+            
+        #for val in nums:  其实这样写就可以了，上面enumerate是多余的在此处
+        #   if d[val]!=1:
+        #        return val
 
 #时间复杂度：O(N) 
 #空间复杂度：O(N)
