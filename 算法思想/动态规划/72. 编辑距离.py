@@ -32,7 +32,7 @@ class Solution:
             return memo[(i, j)]
         return dp(len(word1)-1, len(word2)-1)
         
-# 时间复杂度：O(min(M, N))
+# 时间复杂度：O(?)
 # 空间复杂度：O(M+N)
 
 
