@@ -1,5 +1,6 @@
-方法1.
-inspired by labuladong 算法小抄第二章
+# 方法1.
+# inspired by labuladong 算法小抄第二章
+
 """
 执行用时：
 8184 ms
@@ -33,4 +34,10 @@ class Solution:
             height.append(envelopes[i][1])
         return lengthLIS(height)
 
+    
+# 时间复杂度O(N**2)
+# 空间复杂度O(N)
+
+
+    
       
