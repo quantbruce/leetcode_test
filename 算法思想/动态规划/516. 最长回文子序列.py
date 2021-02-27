@@ -1,21 +1,21 @@
 # 方法1 inspired by 小抄
 """
 执行用时：
-1964 ms
+1460 ms
 , 在所有 Python3 提交中击败了
-17.39%
+50.40%
 的用户
 内存消耗：
-31.8 MB
+31 MB
 , 在所有 Python3 提交中击败了
-15.46%
+46.06%
 的用户
 """
 
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
         n = len(s)
-        dp = [[0 for i in range(n)] for i in range(n)]
+        dp = [[0] * n for i in range(n)]
         for i in range(n):
             dp[i][i] = 1
         for i in range(n-2, -1, -1):
