@@ -57,3 +57,23 @@ class Solution:
 # 时间复杂度：O(KNlogN)
 # 空间复杂度：O(KN)
 
+
+### 方法3 动态规划他法定义： inspired by 小抄
+
+"""
+执行用时：68 ms, 在所有 Python3 提交中击败了85.66%的用户
+内存消耗：21 MB, 在所有 Python3 提交中击败了69.92%的用户
+"""
+
+class Solution:
+    def superEggDrop(self, K: int, N: int) -> int:
+        dp = [[0]*(N+1) for i in range(K+1)] # 行列坐标别弄反了, 体会
+        m = 0
+        while dp[K][m] < N:  # 还可以进一步压缩成1维空间，日后细究！
+            m += 1
+            for k in range(1, K+1):
+                dp[k][m] = dp[k][m-1] + dp[k-1][m-1] + 1
+        return m
+
+# 时间复杂度：O(KN)
+# 空间复杂度：O(KN)
