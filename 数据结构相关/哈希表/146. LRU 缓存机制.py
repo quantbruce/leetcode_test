@@ -2,7 +2,7 @@
 # inspired by 小抄 
 # and https://leetcode-cn.com/problems/lru-cache/solution/shu-ju-jie-gou-fen-xi-python-ha-xi-shuang-xiang-li/
 
-
+### 方法1 底层手写
 """
 执行用时：168 ms, 在所有 Python3 提交中击败了68.14%的用户
 内存消耗：23.7 MB, 在所有 Python3 提交中击败了14.62%的用户
@@ -67,7 +67,26 @@ class LRUCache:
 # 时间复杂度：O(1)
 # 空间复杂度：O(1)
 
+# 方法2 调包法
 
+class LRUCache(collections.OrderedDict):
+
+    def __init__(self, capacity: int):
+        super().__init__()
+        self.capacity = capacity
+
+    def get(self, key: int) -> int:
+        if key not in self:
+            return -1
+        self.move_to_end(key)
+        return self[key]
+
+    def put(self, key: int, value: int) -> None:
+        if key in self:
+            self.move_to_end(key)
+        self[key] = value
+        if len(self) > self.capacity:
+            self.popitem(last=False)
 
 
 
