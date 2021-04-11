@@ -9,7 +9,7 @@ def countingSort(nums):
     for j in range(bucketLen): # 因为bucketLen在这里作为区间右端点(上限), 娶不到, 所以上面要加1
         while bucket[j] > 0:
             nums[sort_idx] = j
-            sort_idx += 1
+            sort_idx += 1      # 这个算法排序没用到比较，排序原理的精髓在于利用了索引天然的有序性
             bucket[j] -= 1
     return nums
 
