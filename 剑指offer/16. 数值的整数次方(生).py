@@ -4,7 +4,8 @@ class Solution:
         res = 1
         if n < 0: x, n = 1 / x, -n
         while n:
-            if n & 1: res *= x
+            if n & 1: # 就是判断n的奇偶性
+                res *= x
             x *= x
             n >>= 1
         return res
