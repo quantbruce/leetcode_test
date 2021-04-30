@@ -1,19 +1,22 @@
-# class CQueue:
-    # def __init__(self):
-        # self.A, self.B = [], []
+/*
+class CQueue:
+    def __init__(self):
+        self.A, self.B = [], []
         
-    # def appendTail(self, value: int) -> None:
-        # self.A.append(value)
+    def appendTail(self, value: int) -> None:
+        self.A.append(value)
 
-    # def deleteHead(self) -> int:
-        # if not self.B:
-            # while self.A:
-                # self.B.append(self.A.pop())
-        # if self.B:
-            # return self.B.pop()
-        # else:
-            # return -1
-            
+    def deleteHead(self) -> int:
+        if not self.B:
+            while self.A:
+                self.B.append(self.A.pop())
+        if self.B:
+            return self.B.pop()
+        else:
+            return -1
+*/
+
+
 
 ############方法1
 
@@ -44,6 +47,7 @@ public:
             return -1;
     }
 };
+
 
 /**
  * Your CQueue object will be instantiated and called as such:
