@@ -39,7 +39,7 @@ public:
             int i=x[0], j=x[1], si=x[2], sj=x[3];
             if(i<0 || i>=m || j<0 || j>=n || si+sj>k || visited[i][j])
                 continue;
-            visited[i][j] = true;
+            visited[i][j] = true;  // c++中没有像python中那样, (i, j) in visited: 的写法。所以需要转个弯这样写
             res++;
             que.push({i+1, j, (i+1)%10 ? si+1 : si-8, sj});
             que.push({i, j+1, si, (j+1)%10 ? sj+1 : sj-8});
