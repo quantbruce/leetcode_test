@@ -16,7 +16,7 @@ public:
         return false;
     }
 
-public:
+private: // 此处替换成public也是可以的，不过还是写private比较保险
     bool dfs(vector<vector<char>> &b, string &w, int i, int j, int k)
     {
         if(i<0 || i>=b.size() || j<0 || j>=b[0].size() || b[i][j]!=w[k])
