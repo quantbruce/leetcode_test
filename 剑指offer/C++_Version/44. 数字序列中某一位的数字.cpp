@@ -14,6 +14,6 @@ public:
             count = 9 * start * digit;
         }
         long num = start + (n-1) / digit;
-        return int(to_string(num)[(n-1)%digit])-'0'; // 它转换成字符的ASCII码作出数出字符串 
+        return int(to_string(num)[(n-1)%digit])-'0'; // 理解下这个-'0', 它转换成字符的ASCII码作出数出字符串 
     }
 };
