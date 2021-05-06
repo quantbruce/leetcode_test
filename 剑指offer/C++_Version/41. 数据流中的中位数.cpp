@@ -3,8 +3,8 @@
 class MedianFinder {
 public:
     /** initialize your data structure here. */
-    priority_queue<int, vector<int>, less<int>> maxheap;
-    priority_queue<int, vector<int>, greater<int>> minheap;
+    priority_queue<int, vector<int>, less<int>> maxheap; // 记忆：从上到下，所有元素都比堆顶元素小(所以是less)
+    priority_queue<int, vector<int>, greater<int>> minheap;  //记忆：从上到下，所有元素都比堆顶元素大 (所以是greater)
     MedianFinder()
     {}
 
