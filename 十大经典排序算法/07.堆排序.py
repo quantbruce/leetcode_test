@@ -1,5 +1,5 @@
 def buildMaxHeap(nums):
-    for i in range(len(nums)//2, -1, -1): # len(num)//2 就是最后一个非叶子节点，要从他开始算
+    for i in range(len(nums)//2, -1, -1): # len(num)//2 就是最后一个非叶子节点，要从他开始算。因为每个叶子节点本身而言，都已经是堆了，不用调整了。
         heapify(nums, i)
 
 def heapify(nums, i):
