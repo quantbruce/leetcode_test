@@ -35,6 +35,23 @@ https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/solu
 
     
 ################方法2 递归法求解 Krahets
+
+class Solution:
+    def kthLargest(self, root: TreeNode, k: int) -> int:
+        def dfs(root):
+            if not root: return
+            dfs(root.right)
+            if self.k == 0:
+                return
+            self.k -= 1
+            if self.k == 0:
+                self.res = root.val
+            dfs(root.left)
+
+        self.k = k
+        dfs(root)
+        return self.res
+    
 https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/solution/mian-shi-ti-54-er-cha-sou-suo-shu-de-di-k-da-jie-d/
     
     
