@@ -4,8 +4,8 @@ def BubbleSort(nums):
     :param nums:list
     :return: list
     """
-    for i in range(1, len(nums)):
-        for j in range(0, len(nums)-i):
+    for i in range(1, len(nums)): # i不作为下标去比较元素的，i的作用仅在于动态的改变j的上限
+        for j in range(0, len(nums)-i): 
             if nums[j] > nums[j+1]:
                 nums[j], nums[j+1] = nums[j+1], nums[j]
     return nums
