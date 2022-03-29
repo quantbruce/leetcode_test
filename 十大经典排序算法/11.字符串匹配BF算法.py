@@ -10,7 +10,7 @@ def Brute_Force(s, t):
             i += 1
             j += 1
         else:
-            i = i - j + 2
+            i = i - j + 2 # 看成是(i-j+1) + 1
             j = 1
     if j >= len(t):
         return i - len(t)
